@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && mkdir -p dist/images && cp -r src/images/* dist/images/",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "serve": "python3 -m http.server"
+    "serve": "python3 -m http.server",
+    "start": "./scripts/start.sh",
+    "stop": "./scripts/stop.sh"
   },
   "keywords": [],
   "author": "",
