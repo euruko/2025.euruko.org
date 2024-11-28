@@ -4,8 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'euruko-primary': '#FF0000', // You can adjust this color
+        'euruko-purple': '#1E0B33',
+        'euruko-accent': '#FF7F50',
+        'euruko-dots': '#6B46C1'
       },
+      backgroundImage: {
+        'dots-pattern': 'radial-gradient(circle, #6B46C1 1px, transparent 1px)',
+      }
     },
   },
   plugins: [],
