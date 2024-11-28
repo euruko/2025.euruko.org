@@ -4,7 +4,7 @@
   "description": "Euruko 2025 website",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && mkdir -p dist/images && cp -r src/images/* dist/images/",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "serve": "python3 -m http.server"
   },
