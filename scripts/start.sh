@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Initial build
+echo "Running initial build..."
+npm run build
+
 # Start Tailwind watcher in the background
 echo "Starting Tailwind watcher..."
 npm run watch &
