@@ -29,6 +29,7 @@ jobs:
         run: |
           mkdir -p dist/images
           cp -r src/images/* dist/images/
+          cp CNAME dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -37,3 +38,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
           force_orphan: true
+          cname: 2025.euruko.org
