@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && cp index.html dist/ && mkdir -p dist/images && cp -r src/images/* dist/images/",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "serve": "cd dist && python3 -m http.server",
+    "serve": "cd dist && python3 -m http.server 8000",
     "start": "./scripts/start.sh",
     "stop": "./scripts/stop.sh"
   },
