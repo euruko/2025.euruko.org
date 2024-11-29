@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Kill any existing server
+./scripts/kill-server.sh
+
 # Initial build
 echo "Running initial build..."
 npm run build
