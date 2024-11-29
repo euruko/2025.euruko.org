@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'euruko-purple': '#1E0B33',
         'euruko-accent': '#FF7F50',
+        'euruko-primary': '#E31C2D',
         'euruko-dots': '#6B46C1'
       },
       backgroundImage: {
