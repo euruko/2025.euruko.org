@@ -4,17 +4,24 @@
   "description": "Euruko 2025 website",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && cp index.html dist/ && mkdir -p dist/images && cp -r src/images/* dist/images/",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "serve": "cd dist && python3 -m http.server 8000",
-    "start": "./scripts/start.sh",
-    "stop": "./scripts/stop.sh"
+    "clean": "rm -rf dist/*",
+    "copy:html": "cp index.html dist/",
+    "copy:images": "mkdir -p dist/images && cp -r src/images/* dist/images/",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build": "npm run clean && npm run build:css && npm run copy:html && npm run copy:images",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "watch:html": "nodemon --watch index.html --exec 'npm run copy:html'",
+    "serve": "browser-sync start --server 'dist' --files 'dist/**/*' --no-notify",
+    "dev": "npm run build && npm-run-all --parallel watch:css watch:html serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.17",
+    "browser-sync": "^3.0.3",
+    "nodemon": "^3.1.9",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
   }
