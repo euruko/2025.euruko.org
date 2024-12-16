@@ -22,14 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build CSS
+      - name: Build
         run: npm run build
 
-      - name: Copy necessary files
-        run: |
-          mkdir -p dist/images
-          cp -r src/images/* dist/images/
-          cp CNAME dist/
+      - name: Copy CNAME
+        run: cp CNAME dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
