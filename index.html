@@ -1,218 +1,539 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuRuKo 2025 - The Heart of Code | Viana do Castelo, Portugal</title>
-    <meta name="description" content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EuRuKo 2025 - The Heart of Code | Viana do Castelo, Portugal</title>
+  <meta name="description"
+    content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://2025.euruko.org">
-    <meta property="og:title" content="EuRuKo 2025 - The Heart of Code | Viana do Castelo, Portugal">
-    <meta property="og:description" content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
-    <meta property="og:image" content="/images/banner.jpg">
-    <meta property="og:image:alt" content="EuRuKo 2025 Conference Banner">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://2025.euruko.org">
+  <meta property="og:title" content="EuRuKo 2025 - The Heart of Code | Viana do Castelo, Portugal">
+  <meta property="og:description"
+    content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+  <meta property="og:image" content="/images/banner.jpg">
+  <meta property="og:image:alt" content="EuRuKo 2025 Conference Banner">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@euruko">
-    <meta name="twitter:title" content="EuRuKo 2025 - The Heart of Code">
-    <meta name="twitter:description" content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
-    <meta name="twitter:image" content="/images/banner.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@euruko">
+  <meta name="twitter:title" content="EuRuKo 2025 - The Heart of Code">
+  <meta name="twitter:description"
+    content="Join us at EuRuKo 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+  <meta name="twitter:image" content="/images/banner.jpg">
 
-    <link href="output.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="images/favicon.png" type="image/png">
+  <link href="output.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    /* Replace the dot pattern with an image background */
+    .bg-image-pattern {
+      background-image: url('images/white-pattern-bg.png');
+      /* Use existing image name */
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      /* Full viewport height */
+      opacity: 0.05;
+      /* Subtle overlay */
+      z-index: 0;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+      pointer-events: none;
+    }
+
+    /* Keep other styles */
+    .text-euruko-yellow {
+      color: #FFDF3A;
+    }
+
+    .bg-euruko-yellow {
+      background-color: #FFDF3A;
+    }
+
+    .bg-gradient-wrapper {
+      background: linear-gradient(to bottom,
+          #eb4f59 0%,
+          #e23846 30%,
+          #CC1525 100%);
+      background-attachment: local;
+    }
+
+    .ruby-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background-image: url('images/favicon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+      opacity: 0.15;
+      filter: blur(2px);
+      transform: translate(20%, -20%) rotate(-45deg);
+      pointer-events: none;
+    }
+
+    .ruby-decoration::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      filter: blur(20px);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .ruby-small {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-image: url('images/favicon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.1;
+      filter: blur(1px);
+    }
+
+    .ruby-bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: translate(30%, 30%) rotate(-15deg);
+    }
+
+    .ruby-top-left {
+      top: 0;
+      left: 0;
+      transform: translate(-30%, -30%) rotate(15deg);
+    }
+  </style>
 </head>
-<body class="flex h-full flex-col bg-euruko-purple">
-    <header>
-        <!-- Navigation hidden for now
-        <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Global">
-            <div class="relative flex items-center justify-between py-6">
-                <div class="flex items-center gap-x-8">
-                    <img src="images/logo.svg" alt="EuRuKo 2025 Logo" class="h-20 w-auto">
-                </div>
-                <div class="flex items-center gap-x-8">
-                    <a href="#sponsors" class="text-sm font-medium leading-6 text-white hover:text-euruko-accent">Sponsors</a>
-                </div>
-            </div>
-        </nav>
-        -->
-    </header>
 
-    <main class="relative isolate flex-1">
-        <!-- Background dots pattern -->
-        <div class="absolute inset-0 -z-10 bg-dots-pattern bg-[size:30px_30px] opacity-20"></div>
+<body class="flex h-full flex-col bg-[#CC1525]">
+  <div class="bg-gradient-wrapper absolute inset-0 h-full"></div>
 
-        <div class="relative isolate bg-gradient-to-b from-euruko-accent to-euruko-purple">
-            <div class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
-                <div class="mx-auto max-w-2xl text-center">
-                    <img src="images/white-logo.svg" alt="EuRuKo 2025 Logo" class="h-56 w-auto mx-auto mb-12">
-                    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                        THE HE<span class="text-euruko-primary">ART</span> OF CODE
-                    </h2>
-                </div>
+  <!-- Background image overlay with fade-out -->
+  <div class="bg-image-pattern"></div>
+
+  <!-- Top navigation bar with evenly distributed links -->
+  <header class="relative z-10">
+    <div class="ruby-decoration"></div>
+
+    <nav class="flex items-center justify-between border-b border-white/10 px-6 py-3" aria-label="Global">
+      <div class="flex items-center space-x-8">
+        <a href="#sponsors" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Sponsors
+        </a>
+        <a href="#faq" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          FAQ
+        </a>
+      </div>
+      <div>
+        <a href="https://papercall.io/euruko-2025" target="_blank"
+          class="rounded-full bg-euruko-yellow px-4 py-2 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
+          Submit a talk
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero section with logo and title -->
+    <div class="relative">
+      <div class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div class="mb-8 md:mb-0 md:w-1/2 flex justify-center">
+            <img src="images/logo-red.svg" alt="EuRuKo 2025" class="h-84 w-auto">
+          </div>
+          <div class="text-center md:w-1/2">
+            <h1 class="text-7xl font-bold tracking-tight text-black sm:text-7xl">
+              THE HE<span class="text-white">ART</span><br>OF CODE
+            </h1>
+            <div class="mt-4 flex items-center flex-wrap gap-4 justify-center">
+              <div class="inline-flex items-center rounded-md bg-white px-3 py-1 text-md font-medium text-red">
+                September 18-19, 2025
+              </div>
+              <div class="inline-flex items-center text-md font-medium text-white">
+                <svg class="mr-1.5 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Viana do Castelo, Portugal
+              </div>
             </div>
+          </div>
         </div>
 
-        <div class="relative isolate px-6 lg:px-8">
-            <div class="mx-auto max-w-7xl py-8 sm:py-12 lg:py-16">
-                <div class="lg:flex lg:items-center lg:gap-x-16">
-                    <!-- Text content (left on desktop, top on mobile) -->
-                    <div class="lg:w-1/2 text-center lg:text-left">
-                        <div>
-                            <p class="text-2xl font-medium text-gray-300 tracking-wide">
-                                CFP is now open at <a href="https://www.papercall.io/euruko-2025" target="_blank" rel="noopener" class="underline text-euruko-primary hover:text-white transition-colors duration-300">Papercall</a>
-                            </p>
-                            <p class="text-2xl font-medium text-gray-300 tracking-wide mt-4">
-                                Tickets will be available in April</a>
-                            </p>
-                        </div>
+        <!-- Stats with shadow -->
+        <div class="mt-16 grid grid-cols-2 gap-4 md:grid-cols-5 hidden">
+          <div class="rounded-lg bg-white/10 py-12 px-4 text-center shadow-lg shadow-black/20">
+            <dt class="text-5xl font-semibold leading-7 text-white">07</dt>
+            <dd class="mt-1 text-sm leading-7 text-white opacity-80">Keynote speakers</dd>
+          </div>
+          <div class="rounded-lg bg-white/10 py-12 px-4 text-center shadow-lg shadow-black/20">
+            <dt class="text-5xl font-semibold leading-7 text-white">07</dt>
+            <dd class="mt-1 text-sm leading-7 text-white opacity-80">Panel Discussions</dd>
+          </div>
+          <div class="rounded-lg bg-white/10 py-12 px-4 text-center shadow-lg shadow-black/20">
+            <dt class="text-5xl font-semibold leading-7 text-white">34</dt>
+            <dd class="mt-1 text-sm leading-7 text-white opacity-80">Talks</dd>
+          </div>
+          <div class="rounded-lg bg-white/10 py-12 px-4 text-center shadow-lg shadow-black/20">
+            <dt class="text-5xl font-semibold leading-7 text-white">07</dt>
+            <dd class="mt-1 text-sm leading-7 text-white opacity-80">Workshops</dd>
+          </div>
+          <div class="rounded-lg bg-white/10 py-12 px-4 text-center shadow-lg shadow-black/20">
+            <dt class="text-5xl font-semibold leading-7 text-white">25+</dt>
+            <dd class="mt-1 text-sm leading-7 text-white opacity-80">Countries represented</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-                            <h1 class="text-3xl mt-8 font-bold tracking-tight text-white sm:text-4xl">
-                                September 18-19, 2025<br>
-                            </h1>
-                            <h2 class="mt-6 text-2xl font-bold tracking-tight text-white">
-                                What is EuRuKo?
-                            </h2>
-                            <p class="mt-4 text-lg leading-8 text-gray-300">
-                                EuRuKo (European Ruby Conference) is an annual conference about the Ruby programming language with an informal atmosphere and lots of opportunities to listen, learn, and talk with developers from all around the world.
-                            </p>
-                            <div class="flex justify-center my-8">
-                                <img src="images/favicon.svg" alt="" class="h-8 w-auto opacity-50" aria-hidden="true">
-                            </div>
-                            <h2 class="mt-6 text-2xl font-bold tracking-tight text-white">
-                                Viana do Castelo, Portugal
-                            </h2>
-                            <p class="mt-6 text-lg leading-8 text-gray-300">
-                                Join us in Viana do Castelo, a charming coastal city where history meets modernity.
-                                Experience a city rich in culture and
-                                architectural heritage, and conveniently located only 40 minutes from Porto Airport.
-                            </p>
-                            <div class="mt-10 flex items-center justify-center lg:justify-start gap-x-8">
-                                <a href="https://ruby.social/@Euruko" target="_blank" rel="noopener" class="text-gray-300 hover:text-euruko-accent">
-                                    <span class="sr-only">Mastodon</span>
-                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://linkedin.com/company/euruko" target="_blank" rel="noopener" class="text-gray-300 hover:text-euruko-accent">
-                                    <span class="sr-only">LinkedIn</span>
-                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://x.com/euruko" target="_blank" rel="noopener" class="text-gray-300 hover:text-euruko-accent">
-                                    <span class="sr-only">X (Twitter)</span>
-                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://discord.gg/EYCTjpC9" target="_blank" rel="noopener" class="text-gray-300 hover:text-euruko-accent">
-                                    <span class="sr-only">Discord</span>
-                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                    </div>
+  <main class="flex-1 relative z-10">
+    <!-- About section -->
+    <div class="relative px-6 py-16 sm:py-12 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="ruby-small ruby-top-left"></div>
 
-                    <!-- Video section (right on desktop, bottom on mobile) -->
-                    <div class="mt-10 lg:mt-0 lg:w-1/2">
-                        <div class="relative aspect-video rounded-xl overflow-hidden bg-gray-900/5 shadow-lg">
-                            <iframe
-                                class="absolute inset-0 w-full h-full"
-                                src="https://www.youtube.com/embed/zqKfGVdQ-wo?autoplay=1&mute=1"
-                                title="Viana do Castelo Promotional Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
+        <div class="lg:flex lg:items-center lg:gap-x-16">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold tracking-tight text-white">ABOUT EURUKO 25'</h2>
+            <p class="mt-4 text-lg leading-8 text-white opacity-80">
+              EuRuKo (European Ruby Conference) is an annual conference about the Ruby programming language with an
+              informal atmosphere and lots of opportunities to listen, learn, and talk with developers from all around
+              the world.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold tracking-tight text-white">VIANA DO CASTELO, PORTUGAL</h2>
+            <p class="mt-4 text-lg leading-8 text-white opacity-80">
+              Join us in Viana do Castelo, a charming coastal city where history meets modernity.
+              Experience a city rich in culture and architectural heritage, and conveniently located only 40 minutes
+              from Porto Airport.
+            </p>
+          </div>
+
+          <!-- Video section -->
+          <div class="mt-10 lg:mt-0 lg:w-1/2">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black/20 shadow-lg">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/zqKfGVdQ-wo?autoplay=1&mute=1"
+                title="Viana do Castelo Promotional Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Sponsors Section -->
-        <div id="sponsors" class="relative isolate px-6 py-24 sm:py-32 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Become a Sponsor</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                    Join us in making EuRuKo 2025 an unforgettable experience. Support the Ruby community and showcase your brand to hundreds of passionate developers.
-                </p>
-                <div class="mt-10 flex items-center justify-center">
-                    <a href="https://drive.google.com/file/d/1FQYh2qHoYavWVkEWZzQ09cRK_Ydw9P6g/view?usp=sharing"
-                       target="_blank"
-                       rel="noopener"
-                       class="rounded-md bg-euruko-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-euruko-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-euruko-primary">
-                        Download Sponsorship Package
-                    </a>
-                </div>
+    <!-- Speakers section -->
+    <div id="speakers" class="relative px-6 py-16 sm:py-12 lg:px-8 hidden">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="text-2xl font-bold tracking-tight text-white mb-12">OUR SPEAKERS</h2>
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Speaker cards -->
+          <div class="text-center">
+            <div class="relative mx-auto h-32 w-32 rounded-full overflow-hidden bg-white/10">
+              <!-- Empty circle for now -->
             </div>
+            <h3 class="mt-4 text-base font-semibold text-white">Speaker Name</h3>
+            <p class="text-sm text-white opacity-80">Title / Company</p>
+          </div>
+          <!-- More speaker cards (add at least 9 more to match design) -->
+        </div>
+        <div class="mt-12 text-center">
+          <a href="#"
+            class="rounded-full bg-euruko-yellow px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
+            See all speakers
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule section -->
+    <div id="schedule" class="relative px-6 py-24 sm:py-32 lg:px-8 hidden">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-16">Schedule</h2>
+
+        <div class="flex justify-center gap-4 mb-12">
+          <button class="rounded-full bg-euruko-yellow px-6 py-2 text-sm font-semibold text-black">19</button>
+          <button
+            class="rounded-full bg-white/10 px-6 py-2 text-sm font-semibold text-white hover:bg-white/20">20</button>
+          <button
+            class="rounded-full bg-white/10 px-6 py-2 text-sm font-semibold text-white hover:bg-white/20">21</button>
         </div>
 
-        <!-- Newsletter Section -->
-        <div class="relative isolate overflow-hidden py-8 sm:py-12 lg:py-16 flex justify-center">
-            <script async data-uid="efd369c9de" src="https://euruko.kit.com/efd369c9de/index.js"></script>
-        </div>
-    </main>
-
-    <footer class="relative border-t border-white/10">
-        <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <!-- Logo and Description -->
-                <div class="space-y-8">
-                    <img src="images/logo.svg" alt="EuRuKo 2025 Logo" class="h-12 w-auto">
-                    <p class="text-sm leading-6 text-gray-300">
-                        The European Ruby Conference<br>
-                        September 18-19, 2025<br>
-                        Viana do Castelo, Portugal
-                    </p>
-                </div>
-
-                <!-- Contact -->
-                <div class="mt-16 xl:mt-0">
-                    <h3 class="text-sm font-semibold leading-6 text-white">Contact</h3>
-                    <div class="mt-6 space-y-4">
-                        <a href="mailto:organisers@euruko.org" class="text-sm leading-6 text-gray-300 hover:text-euruko-accent">
-                            organisers@euruko.org
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Social Links -->
-                <div class="mt-16 xl:mt-0">
-                    <h3 class="text-sm font-semibold leading-6 text-white">Social</h3>
-                    <div class="mt-6 flex space-x-6">
-                        <a href="https://ruby.social/@Euruko" target="_blank" rel="noopener" class="text-gray-400 hover:text-euruko-accent">
-                            <span class="sr-only">Mastodon</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://linkedin.com/company/euruko" target="_blank" rel="noopener" class="text-gray-400 hover:text-euruko-accent">
-                            <span class="sr-only">LinkedIn</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/euruko" target="_blank" rel="noopener" class="text-gray-400 hover:text-euruko-accent">
-                            <span class="sr-only">X (Twitter)</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://discord.gg/EYCTjpC9" target="_blank" rel="noopener" class="text-gray-400 hover:text-euruko-accent">
-                            <span class="sr-only">Discord</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+        <div class="space-y-4">
+          <!-- Schedule items -->
+          <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4">
+            <div class="text-sm text-white opacity-80">9:00 - 10:00</div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold text-white">Opening Keynote</h3>
+              <p class="text-sm text-white opacity-80">Speaker Name</p>
             </div>
+            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
+              <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+          <!-- More schedule items -->
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <!-- Sponsors section -->
+    <div id="sponsors" class="relative px-6 py-8 sm:py-12 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="ruby-small ruby-top-left"></div>
+
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-16">
+          A BIG SHOUTOUT<br>TO OUR SPONSORS!
+        </h2>
+
+        <!-- Hide top and middle tier sponsors for now -->
+
+        <!-- Silver Sponsors -->
+        <div class="flex justify-center">
+          <a href="https://84codes.com" target="_blank">
+            <div class="flex h-24 items-center justify-center rounded-full bg-white px-16">
+              <img src="images/sponsors/84codes.png" alt="84codes" class="h-16">
+            </div>
+          </a>
+        </div>
+
+        <!-- After the current sponsors display and before the "Become a Sponsor" section -->
+        <div class="flex items-center justify-center my-16">
+          <div class="w-full max-w-xs h-px bg-white/20"></div>
+          <div class="mx-4">
+            <div class="relative w-8 h-8">
+              <div class="absolute inset-0 bg-euruko-yellow rounded-full opacity-20"></div>
+              <img src="images/favicon.svg" class="w-8 h-8">
+            </div>
+          </div>
+          <div class="w-full max-w-xs h-px bg-white/20"></div>
+        </div>
+
+        <!-- Add a decorative ruby -->
+        <div class="ruby-small ruby-bottom-right"></div>
+
+        <!-- Inside the sponsors section, add this after the current sponsor display -->
+        <div class="mt-20 mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Become a Sponsor</h2>
+          <p class="mt-6 text-lg leading-8 text-white opacity-80">
+            Join us in making EuRuKo 2025 an unforgettable experience. Support the Ruby community and showcase your
+            brand to hundreds of passionate developers.
+          </p>
+          <div class="mt-10 flex items-center justify-center">
+            <a href="https://drive.google.com/file/d/1FQYh2qHoYavWVkEWZzQ09cRK_Ydw9P6g/view?usp=sharing" target="_blank"
+              rel="noopener"
+              class="rounded-full bg-euruko-yellow px-6 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              Download Sponsorship Package
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ section -->
+    <div id="faq" class="relative px-6 py-8 sm:py-12 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-16">
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-6">
+          <!-- First FAQ item (open by default) -->
+          <div class="rounded-lg bg-white/5 p-6 faq-item" data-open="true">
+            <button class="flex w-full items-center justify-between text-left" onclick="toggleFAQ(this)">
+              <span class="text-lg font-semibold text-white">When will tickets sales open?</span>
+              <svg class="h-6 w-6 text-white transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="mt-4 text-white opacity-80 faq-content">
+              Tickets sales will start April 2025. We will announce the date here, in our newsletter and on our social media.
+            </div>
+          </div>
+
+          <!-- Second FAQ item -->
+          <div class="rounded-lg bg-white/5 p-6 faq-item" data-open="false">
+            <button class="flex w-full items-center justify-between text-left" onclick="toggleFAQ(this)">
+              <span class="text-lg font-semibold text-white">Where will the conference be held?</span>
+              <svg class="h-6 w-6 text-white transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="mt-4 text-white opacity-80 faq-content hidden">
+              The conference will be held at the Convention Center of Viana do Castelo / Centro Cultural de Viana do Castelo. Here is the location on Google Maps: <a href="https://maps.app.goo.gl/ZraPnsKav7q9YfyX8" target="_blank" rel="noopener" class="text-euruko-yellow">Google Maps</a>.
+            </div>
+          </div>
+
+          <!-- Add more FAQ items here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter section -->
+    <div class="relative px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Stay in the Loop!
+            </h2>
+            <h3 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Subscribe to get updates on the conference
+            </h3>
+            <div class="mt-8">
+              <script async data-uid="99cb4f5a3c" src="https://euruko.kit.com/99cb4f5a3c/index.js"></script>
+            </div>
+          </div>
+          <div class="mt-16 lg:mt-0 lg:w-1/2 flex justify-end">
+            <img src="images/mail.png" alt="" class="w-96" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Updated footer layout to include map -->
+  <footer class="relative border-t border-white/10 bg-gray-100 z-10">
+    <!-- Ruby decoration in the background -->
+    <div class="absolute left-0 top-0 w-32 h-32 opacity-5">
+      <img src="images/favicon.svg" alt="" class="w-full h-full invert" aria-hidden="true">
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+      <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+        <!-- Left column: Logo and Description -->
+        <div class="w-full lg:w-1/4 text-center lg:text-left">
+          <img src="images/logo.svg" alt="EuRuKo 2025 Logo" class="h-12 w-auto mx-auto lg:mx-0">
+          <p class="mt-4 text-xs leading-5 text-gray-500">
+            The European Ruby Conference<br>
+            September 18-19, 2025<br>
+            Viana do Castelo, Portugal
+          </p>
+        </div>
+
+        <!-- Center column: Map -->
+        <div class="w-full lg:w-2/4 h-64 rounded-lg overflow-hidden shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11917.714431812341!2d-8.827516399999999!3d41.6896822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25b62f6dd4bb9b%3A0xa675241dd2bca92b!2sCentro%20Cultural%20de%20Viana%20do%20Castelo!5e0!3m2!1spt-PT!2spt!4v1742298639726!5m2!1spt-PT!2spt"
+            class="w-full h-full"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Right column: Links and Social -->
+        <div class="w-full lg:w-1/4 flex flex-col sm:flex-row lg:flex-col gap-8 sm:gap-16 lg:gap-8">
+          <!-- Links -->
+          <div class="text-center lg:text-left">
+            <ul class="space-y-2">
+              <li><a href="#sponsors" class="text-xs text-gray-500 hover:text-gray-700">Sponsors</a></li>
+              <li><a href="#faq" class="text-xs text-gray-500 hover:text-gray-700">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact and Social combined -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-xs font-semibold text-gray-500">Contact</h3>
+            <ul class="mt-3 space-y-2">
+              <li>
+                <a href="mailto:organisers@euruko.org" class="text-xs text-gray-500 hover:text-gray-700">
+                  organisers@euruko.org
+                </a>
+              </li>
+            </ul>
+
+            <h3 class="text-xs font-semibold text-gray-500 mt-6">Social</h3>
+            <div class="mt-3 flex justify-center lg:justify-start space-x-3">
+              <a href="https://ruby.social/@Euruko" target="_blank" rel="noopener"
+                class="text-gray-500 hover:text-gray-700">
+                <span class="sr-only">Mastodon</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/company/euruko" target="_blank" rel="noopener"
+                class="text-gray-500 hover:text-gray-700">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://x.com/euruko" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-700">
+                <span class="sr-only">X (Twitter)</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://discord.gg/G9hNCjYSsE" target="_blank" rel="noopener"
+                class="text-gray-500 hover:text-gray-700">
+                <span class="sr-only">Discord</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simplified JavaScript without toggleAll function -->
+  <script>
+    function toggleFAQ(button) {
+      const item = button.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const arrow = button.querySelector('svg');
+      const isOpen = item.getAttribute('data-open') === 'true';
+
+      // Toggle the current item
+      item.setAttribute('data-open', !isOpen);
+      content.classList.toggle('hidden');
+      arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+    }
+
+    // Initialize: Open first FAQ item
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstItem = document.querySelector('.faq-item');
+      if (firstItem) {
+        const content = firstItem.querySelector('.faq-content');
+        const arrow = firstItem.querySelector('svg');
+
+        firstItem.setAttribute('data-open', 'true');
+        content.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  </script>
 </body>
+
 </html>
