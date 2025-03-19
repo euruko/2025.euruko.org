@@ -117,10 +117,45 @@
       left: 0;
       transform: translate(-30%, -30%) rotate(15deg);
     }
+
+    /* Prevent horizontal scrolling on mobile */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* Make images more responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust hero section for better responsiveness */
+    @media (max-width: 768px) {
+        h1.text-7xl {
+            font-size: 3rem; /* Smaller font size on mobile */
+        }
+
+        .hero-content {
+            padding: 0 1rem;
+        }
+
+        .newsletter-image img {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+
+    /* Improve footer responsiveness */
+    @media (max-width: 1024px) {
+        .footer-map {
+            height: 200px;
+        }
+    }
   </style>
 </head>
 
-<body class="flex h-full flex-col bg-[#CC1525]">
+<body class="flex h-full flex-col bg-[#CC1525] w-full">
   <div class="bg-gradient-wrapper absolute inset-0 h-full"></div>
 
   <!-- Background image overlay with fade-out -->
@@ -151,11 +186,11 @@
     <div class="relative">
       <div class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div class="mb-8 md:mb-0 md:w-1/2 flex justify-center">
-            <img src="images/logo-red.svg" alt="EuRuKo 2025" class="h-84 w-auto">
+          <div class="mb-8 md:mb-0 md:w-1/2 flex justify-center px-4">
+            <img src="images/logo-red.svg" alt="EuRuKo 2025" class="w-full max-w-xs md:max-w-md h-auto">
           </div>
-          <div class="text-center md:w-1/2">
-            <h1 class="text-7xl font-bold tracking-tight text-black sm:text-7xl">
+          <div class="text-center md:w-1/2 hero-content">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-black">
               THE HE<span class="text-white">ART</span><br>OF CODE
             </h1>
             <div class="mt-4 flex items-center flex-wrap gap-4 justify-center">
@@ -403,8 +438,8 @@
               <script async data-uid="99cb4f5a3c" src="https://euruko.kit.com/99cb4f5a3c/index.js"></script>
             </div>
           </div>
-          <div class="mt-16 lg:mt-0 lg:w-1/2 flex justify-end">
-            <img src="images/mail.png" alt="" class="w-96" aria-hidden="true">
+          <div class="mt-16 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end newsletter-image">
+            <img src="images/mail.png" alt="" class="w-full max-w-xs lg:max-w-sm xl:max-w-md" aria-hidden="true">
           </div>
         </div>
       </div>
@@ -431,7 +466,7 @@
         </div>
 
         <!-- Center column: Map -->
-        <div class="w-full lg:w-2/4 h-64 rounded-lg overflow-hidden shadow-sm">
+        <div class="w-full lg:w-2/4 h-48 md:h-64 rounded-lg overflow-hidden shadow-sm footer-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11917.714431812341!2d-8.827516399999999!3d41.6896822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25b62f6dd4bb9b%3A0xa675241dd2bca92b!2sCentro%20Cultural%20de%20Viana%20do%20Castelo!5e0!3m2!1spt-PT!2spt!4v1742298639726!5m2!1spt-PT!2spt"
             class="w-full h-full"
