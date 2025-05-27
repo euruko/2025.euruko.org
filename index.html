@@ -149,8 +149,8 @@
     }
 
     .speaker-photo {
-        width: 100px;
-        height: 100px;
+        width: 125px;
+        height: 125px;
         margin: 0 auto;
     }
 
@@ -184,12 +184,12 @@
         }
 
         .speaker-grid {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
 
         .speaker-photo {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
         }
 
         .schedule-item {
@@ -254,8 +254,8 @@
     <!-- Mobile navigation -->
     <nav class="md:hidden mobile-navbar border-b border-white/10" aria-label="Mobile">
       <div class="flex items-center space-x-8">
-        <a href="#about" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
-          About
+        <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Speakers
         </a>
         <a href="#sponsors" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Sponsors
@@ -275,8 +275,8 @@
     <!-- Desktop navigation -->
     <nav class="hidden md:flex items-center justify-between border-b border-white/10 px-6 py-3" aria-label="Global">
       <div class="flex items-center space-x-8">
-        <a href="#about" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
-          About
+        <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Speakers
         </a>
         <a href="#sponsors" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Sponsors
@@ -403,88 +403,125 @@
     </div>
 
     <!-- Speakers section -->
-    <div id="speakers" class="relative px-6 py-16 sm:py-12 lg:px-8 hidden">
+    <div id="speakers" class="relative px-6 py-16 sm:py-12 lg:px-8">
       <div class="mx-auto max-w-7xl">
         <h2 class="text-2xl font-bold tracking-tight text-white mb-12">OUR SPEAKERS</h2>
         <div class="speaker-grid">
           <!-- Speaker cards -->
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker1.jpg" alt="Hannah Davis" class="w-full h-full object-cover">
+              <img src="images/speakers/alexander-baygeldin.png" alt="Alexander Baygeldin" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Hannah Davis</h3>
-            <p class="text-sm text-white opacity-80">CodeArt / NYC</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Alexander Baygeldin</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker2.jpg" alt="Yukihiro Matsumoto" class="w-full h-full object-cover">
+              <img src="images/speakers/marco-roth.png" alt="Marco Roth" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Yukihiro Matsumoto</h3>
-            <p class="text-sm text-white opacity-80">Ruby Creator</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Marco Roth</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker3.jpg" alt="Eileen Uchitelle" class="w-full h-full object-cover">
+              <img src="images/speakers/carmine-paolino.png" alt="Carmine Paolino" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Eileen Uchitelle</h3>
-            <p class="text-sm text-white opacity-80">GitHub / Rails Core</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Carmine Paolino</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker4.jpg" alt="Paulo Pereira" class="w-full h-full object-cover">
+              <img src="images/speakers/szymon-fiedler.png" alt="Szymon Fiedler" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Paulo Pereira</h3>
-            <p class="text-sm text-white opacity-80">Shopify / Canada</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Szymon Fiedler</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker5.jpg" alt="Katrina Owen" class="w-full h-full object-cover">
+              <img src="images/speakers/pawel-strzalkowski.png" alt="Paweł Strzałkowski" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Katrina Owen</h3>
-            <p class="text-sm text-white opacity-80">Exercism.io</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Paweł Strzałkowski</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker6.jpg" alt="Kent Beck" class="w-full h-full object-cover">
+              <img src="images/speakers/emiliano-della-casa.png" alt="Emiliano Della Casa" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Kent Beck</h3>
-            <p class="text-sm text-white opacity-80">TDD / Extreme Programming</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Emiliano Della Casa</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker7.jpg" alt="Avdi Grimm" class="w-full h-full object-cover">
+              <img src="images/speakers/lucian-ghinda.png" alt="Lucian Ghinda" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Avdi Grimm</h3>
-            <p class="text-sm text-white opacity-80">Ruby Tapas</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Lucian Ghinda</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker8.jpg" alt="Sandi Metz" class="w-full h-full object-cover">
+              <img src="images/speakers/fritz-meissner.png" alt="Fritz Meissner" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Sandi Metz</h3>
-            <p class="text-sm text-white opacity-80">Author / POODR</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Fritz Meissner</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker9.jpg" alt="Aaron Patterson" class="w-full h-full object-cover">
+              <img src="images/speakers/joel-drapper.png" alt="Joel Drapper" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Aaron Patterson</h3>
-            <p class="text-sm text-white opacity-80">GitHub / Rails Core</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Joel Drapper</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
           <div class="text-center">
             <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
-              <img src="images/speakers/speaker10.jpg" alt="Tenderlove" class="w-full h-full object-cover">
+              <img src="images/speakers/hitoshi-hasumi.png" alt="Hitoshi HASUMI" class="w-full h-full object-cover">
             </div>
-            <h3 class="mt-4 text-base font-semibold text-white">Tenderlove</h3>
-            <p class="text-sm text-white opacity-80">Shopify / Ruby Core</p>
+            <h3 class="mt-4 text-lg font-semibold text-white">Hitoshi HASUMI</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/ivo-anjo.png" alt="Ivo Anjo" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Ivo Anjo</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/remy-hannequin.png" alt="Rémy Hannequin" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Rémy Hannequin</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/obie-fernandez.png" alt="Obie Fernandez" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Obie Fernandez</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/julia-egorova.png" alt="Julia Egorova" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Julia Egorova</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/karen-jex.png" alt="Karen Jex" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Karen Jex</h3>
+            <p class="text-sm text-white opacity-80"></p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto rounded-full overflow-hidden bg-white/10 speaker-photo">
+              <img src="images/speakers/albert-pazderin.png" alt="Albert Pazderin" class="w-full h-full object-cover">
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Albert Pazderin</h3>
+            <p class="text-sm text-white opacity-80"></p>
           </div>
         </div>
         <div class="mt-12 text-center">
-          <a href="#"
-            class="rounded-full bg-euruko-yellow px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
-            See all speakers
-          </a>
-
           <!-- Add ticket button to Speakers section -->
           <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
             class="ml-4 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
@@ -954,7 +991,7 @@
           <!-- Links -->
           <div class="text-center lg:text-left">
             <ul class="space-y-2">
-              <li><a href="#about" class="text-xs text-gray-500 hover:text-gray-700">About</a></li>
+              <li><a href="#speakers" class="text-xs text-gray-500 hover:text-gray-700">Speakers</a></li>
               <li><a href="#sponsors" class="text-xs text-gray-500 hover:text-gray-700">Sponsors</a></li>
               <li><a href="#accessibility" class="text-xs text-gray-500 hover:text-gray-700">Accessibility</a></li>
             </ul>
