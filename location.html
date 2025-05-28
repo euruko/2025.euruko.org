@@ -87,10 +87,47 @@
       transform: translate(-30%, -30%) rotate(15deg);
     }
 
-    /* Prevent horizontal scrolling on mobile */
-    html, body {
+    /* Prevent horizontal scrolling on mobile - FIXED: Only apply to body and with more specific targeting */
+    body {
         overflow-x: hidden;
         max-width: 100%;
+    }
+
+    /* Ensure we don't break vertical scrolling on any OS/browser */
+    html {
+        overflow-y: auto;
+        max-width: 100%;
+    }
+
+    /* Add focus styles for better accessibility */
+    a:focus,
+    button:focus {
+        outline: 2px solid #FFDF3A;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    /* Improve contrast for better accessibility */
+    .text-white.opacity-80 {
+        opacity: 0.9;
+    }
+
+    /* Add skip link for screen readers */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #FFDF3A;
+        color: black;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .skip-link:focus {
+        top: 6px;
     }
 
     /* Make images more responsive */
@@ -143,11 +180,14 @@
 </head>
 
 <body class="flex h-full flex-col bg-[#CC1525] w-full">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <div class="bg-gradient-wrapper absolute inset-0 h-full"></div>
 
   <!-- Top navigation bar with evenly distributed links -->
   <header class="relative z-10">
-    <div class="ruby-decoration"></div>
+    <div class="ruby-decoration" aria-hidden="true"></div>
 
     <!-- Mobile navigation -->
     <nav class="md:hidden mobile-navbar border-b border-white/10" aria-label="Mobile">
@@ -186,7 +226,7 @@
     </nav>
   </header>
 
-  <main class="flex-1 relative z-10">
+  <main id="main-content" class="flex-1 relative z-10">
     <!-- Hero section with Viana do Castelo panorama -->
     <div class="hero-location">
       <div class="hero-overlay">
@@ -198,7 +238,7 @@
     <!-- About the city -->
     <section class="relative px-6 py-16 sm:py-12 lg:px-8">
       <div class="mx-auto max-w-7xl">
-        <div class="ruby-small ruby-top-left"></div>
+        <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
 
         <div class="lg:flex lg:items-center lg:gap-x-16">
           <div class="lg:w-1/2">
