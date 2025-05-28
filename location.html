@@ -8,6 +8,14 @@
   <meta name="description"
     content="Discover Viana do Castelo, Portugal - the host city for EuRuKo 2025. Learn about the venue, transportation, accommodation, and what to explore in this charming coastal city.">
 
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://maps.app.goo.gl">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="output.css" as="style">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://2025.euruko.org/location.html">
@@ -518,7 +526,7 @@
       <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
         <!-- Left column: Logo and Description -->
         <div class="w-full lg:w-1/4 text-center lg:text-left">
-          <img src="images/logo.svg" alt="EuRuKo 2025 Logo" class="h-12 w-auto mx-auto lg:mx-0">
+          <img src="images/logo.svg" alt="EuRuKo 2025 Logo" class="h-12 w-auto mx-auto lg:mx-0" width="120" height="48" loading="lazy">
           <p class="mt-4 text-xs leading-5 text-gray-500">
             The European Ruby Conference<br>
             September 18-19, 2025<br>
