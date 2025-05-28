@@ -62,11 +62,11 @@
 
     /* Keep other styles */
     .text-euruko-yellow {
-      color: #FFDF3A;
+      color: #FFE55C;
     }
 
     .bg-euruko-yellow {
-      background-color: #FFDF3A;
+      background-color: #FFE55C;
     }
 
     .bg-gradient-wrapper {
@@ -143,14 +143,14 @@
     /* Add focus styles for better accessibility */
     a:focus,
     button:focus {
-        outline: 2px solid #FFDF3A;
+        outline: 3px solid #FFE55C;
         outline-offset: 2px;
         border-radius: 4px;
     }
 
     /* Improve contrast for better accessibility */
     .text-white.opacity-80 {
-        opacity: 0.9;
+        opacity: 0.95;
     }
 
     /* Add skip link for screen readers */
@@ -158,7 +158,7 @@
         position: absolute;
         top: -40px;
         left: 6px;
-        background: #FFDF3A;
+        background: #FFE55C;
         color: black;
         padding: 8px;
         text-decoration: none;
@@ -304,7 +304,7 @@
     }
     .speaker-talk {
       margin-top: 0.5rem;
-      color: #FFDF3A;
+      color: #FFE55C;
       text-align: center;
       font-size: 1rem;
       font-weight: 500;
@@ -494,22 +494,22 @@
           class="rounded-full bg-euruko-yellow px-3 py-2 text-xs font-semibold text-black shadow-sm hover:bg-opacity-90">
           TICKETS
         </a>
-        <button class="mobile-menu-button" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavLinks">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
       </div>
       
       <!-- Mobile menu dropdown -->
-      <div class="mobile-nav-links" id="mobileNavLinks">
-        <a href="#speakers" class="text-white hover:text-euruko-yellow" onclick="closeMobileMenu()">
+      <div class="mobile-nav-links" id="mobileNavLinks" role="menu" aria-labelledby="mobile-menu-button">
+        <a href="#speakers" class="text-white hover:text-euruko-yellow" role="menuitem">
           Speakers
         </a>
-        <a href="#sponsors" class="text-white hover:text-euruko-yellow" onclick="closeMobileMenu()">
+        <a href="#sponsors" class="text-white hover:text-euruko-yellow" role="menuitem">
           Sponsors
         </a>
-        <a href="#accessibility" class="text-white hover:text-euruko-yellow" onclick="closeMobileMenu()">
+        <a href="#accessibility" class="text-white hover:text-euruko-yellow" role="menuitem">
           Accessibility
         </a>
       </div>
@@ -601,13 +601,13 @@
 
   <main id="main-content" class="flex-1 relative z-10">
     <!-- About section -->
-    <div id="about" class="relative mobile-section-spacing lg:px-8">
+    <section id="about" class="relative mobile-section-spacing lg:px-8" aria-labelledby="about-heading">
       <div class="mx-auto max-w-7xl">
         <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
 
         <div class="lg:flex lg:items-center lg:gap-x-16">
           <div class="lg:w-1/2">
-            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-white">ABOUT EURUKO 25'</h2>
+            <h2 id="about-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white">ABOUT EURUKO 25'</h2>
             <p class="mt-4 mobile-text-lg text-white opacity-80">
               EuRuKo (European Ruby Conference) is an annual conference about the Ruby programming language with an
               informal atmosphere and lots of opportunities to listen, learn, and talk with developers from all around
@@ -644,348 +644,144 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Speakers section -->
-    <div id="speakers" class="relative mobile-section-spacing lg:px-8">
+    <section id="speakers" class="relative mobile-section-spacing lg:px-8" aria-labelledby="speakers-heading">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-xl md:text-2xl font-bold tracking-tight text-white mb-8 md:mb-12 text-center">OUR SPEAKERS</h2>
-        <div class="speaker-grid">
+        <h2 id="speakers-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white mb-8 md:mb-12 text-center">OUR SPEAKERS</h2>
+        <div class="speaker-grid" role="list" aria-label="Conference speakers">
           <!-- Speaker cards -->
-          <div class="speaker-card">
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/albert-pazderin.png" alt="Albert Pazderin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Albert Pazderin</div>
-            <div class="speaker-talk">Building interactive Ruby gem tutorials with Wasm – yes, right in the browser!</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Albert Pazderin</h3>
+            <p class="speaker-talk">Building interactive Ruby gem tutorials with Wasm – yes, right in the browser!</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/alexander-baygeldin.png" alt="Alexander Baygeldin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Alexander Baygeldin</div>
-            <div class="speaker-talk">Prioritization justice: lessons from making background jobs fair at scale</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Alexander Baygeldin</h3>
+            <p class="speaker-talk">Prioritization justice: lessons from making background jobs fair at scale</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/carmine-paolino.png" alt="Carmine Paolino" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Carmine Paolino</div>
-            <div class="speaker-talk">RubyLLM: Making AI Development Beautiful Again</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Carmine Paolino</h3>
+            <p class="speaker-talk">RubyLLM: Making AI Development Beautiful Again</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/emiliano-della-casa.png" alt="Emiliano Della Casa" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Emiliano Della Casa</div>
-            <div class="speaker-talk">gRPC on Ruby On Rails - a perfect match!</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Emiliano Della Casa</h3>
+            <p class="speaker-talk">gRPC on Ruby On Rails - a perfect match!</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/fritz-meissner.png" alt="Fritz Meissner" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Fritz Meissner</div>
-            <div class="speaker-talk">How to improve your own and others' code</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Fritz Meissner</h3>
+            <p class="speaker-talk">How to improve your own and others' code</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/hitoshi-hasumi.png" alt="Hitoshi HASUMI" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Hitoshi HASUMI</div>
-            <div class="speaker-talk">PicoRuby Hands-on: Internet of Things Edition</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Hitoshi HASUMI</h3>
+            <p class="speaker-talk">PicoRuby Hands-on: Internet of Things Edition</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/ivo-anjo.png" alt="Ivo Anjo" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Ivo Anjo</div>
-            <div class="speaker-talk">How a Ruby profiler works: Stackprof under a microscope</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Ivo Anjo</h3>
+            <p class="speaker-talk">How a Ruby profiler works: Stackprof under a microscope</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/joel-drapper.png" alt="Joel Drapper" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Joel Drapper</div>
-            <div class="speaker-talk">Smoke and Mirrors: the Tricks Behind Magical Ruby Interfaces</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Joel Drapper</h3>
+            <p class="speaker-talk">Smoke and Mirrors: the Tricks Behind Magical Ruby Interfaces</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/julia-egorova.png" alt="Julia Egorova" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Julia Egorova</div>
-            <div class="speaker-talk">Don't Be "Thread"-ened: Testing Multithreaded Code with Confidence</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Julia Egorova</h3>
+            <p class="speaker-talk">Don't Be "Thread"-ened: Testing Multithreaded Code with Confidence</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/karen-jex.png" alt="Karen Jex" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Karen Jex</div>
-            <div class="speaker-talk">Postgres Partitioning Best Practices</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Karen Jex</h3>
+            <p class="speaker-talk">Postgres Partitioning Best Practices</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/lucian-ghinda.png" alt="Lucian Ghinda" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Lucian Ghinda</div>
-            <div class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Lucian Ghinda</h3>
+            <p class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/marco-roth.png" alt="Marco Roth" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Marco Roth</div>
-            <div class="speaker-talk">Introducing ReActionView: A new ActionView-Compatible ERB Engine</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Marco Roth</h3>
+            <p class="speaker-talk">Introducing ReActionView: A new ActionView-Compatible ERB Engine</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/obie-fernandez.png" alt="Obie Fernandez" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Obie Fernandez</div>
-            <div class="speaker-talk">Roasting Code for Fun & Profit with Structured AI Workflows</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Obie Fernandez</h3>
+            <p class="speaker-talk">Roasting Code for Fun & Profit with Structured AI Workflows</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/pawel-strzalkowski.png" alt="Paweł Strzałkowski" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Paweł Strzałkowski</div>
-            <div class="speaker-talk">Making Rails AI-Native with the Model Context Protocol</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Paweł Strzałkowski</h3>
+            <p class="speaker-talk">Making Rails AI-Native with the Model Context Protocol</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/remy-hannequin.png" alt="Rémy Hannequin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Rémy Hannequin</div>
-            <div class="speaker-talk">The hidden value of niche open-source projects</div>
-          </div>
-          <div class="speaker-card">
+            <h3 class="speaker-name">Rémy Hannequin</h3>
+            <p class="speaker-talk">The hidden value of niche open-source projects</p>
+          </article>
+          <article class="speaker-card" role="listitem">
             <div class="speaker-photo">
               <img src="images/speakers/szymon-fiedler.png" alt="Szymon Fiedler" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
             </div>
-            <div class="speaker-name">Szymon Fiedler</div>
-            <div class="speaker-talk">Rewrite with confidence: validating business rules through isolated testing</div>
-          </div>
+            <h3 class="speaker-name">Szymon Fiedler</h3>
+            <p class="speaker-talk">Rewrite with confidence: validating business rules through isolated testing</p>
+          </article>
         </div>
         <div class="mt-12 text-center">
-          <!-- Add ticket button to Speakers section -->
           <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
-            class="ml-4 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
+            class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
             GET YOUR TICKET
           </a>
         </div>
       </div>
-    </div>
-
-    <!-- Schedule section -->
-    <div id="schedule" class="relative px-6 py-24 sm:py-32 lg:px-8 hidden">
-      <div class="mx-auto max-w-7xl">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-16">SCHEDULE</h2>
-
-        <div class="schedule-day-tabs mb-12">
-          <button class="rounded-full bg-euruko-yellow px-6 py-2 text-sm font-semibold text-black">19</button>
-          <button
-            class="rounded-full bg-white/10 px-6 py-2 text-sm font-semibold text-white hover:bg-white/20">20</button>
-          <button
-            class="rounded-full bg-white/10 px-6 py-2 text-sm font-semibold text-white hover:bg-white/20">21</button>
-        </div>
-
-        <div class="flex gap-8">
-          <!-- Main schedule list -->
-          <div class="flex-1 space-y-4">
-            <!-- Schedule items -->
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">9:00 - 10:00</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">OPENING KEYNOTE</h3>
-                <p class="text-sm text-white opacity-80">Yukihiro Matsumoto</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">10:00 - 10:45</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">REFLECTION ON RAILS</h3>
-                <p class="text-sm text-white opacity-80">Eileen Uchitelle, Shopify</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">10:45 - 11:15</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">COFFEE BREAK</h3>
-                <p class="text-sm text-white opacity-80"></p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">11:15 - 12:00</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">EXPERT OVERVIEW</h3>
-                <p class="text-sm text-white opacity-80">Sandi Metz</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">12:00 - 12:45</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">MICROSERVICES FOR RUBY</h3>
-                <p class="text-sm text-white opacity-80">Katrina Owen, Exercism.io</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">12:45 - 14:00</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">LUNCH BREAK</h3>
-                <p class="text-sm text-white opacity-80"></p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">14:00 - 14:45</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">REFLECTION ON RAILS</h3>
-                <p class="text-sm text-white opacity-80">Eileen Uchitelle, Shopify</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-lg bg-white/5 p-4 schedule-item">
-              <div class="text-sm text-white opacity-80">14:45 - 15:30</div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white">REFLECTION ON RAILS</h3>
-                <p class="text-sm text-white opacity-80">Eileen Uchitelle, Shopify</p>
-              </div>
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-euruko-yellow">
-                <svg class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right sidebar with day details - hidden on mobile -->
-          <div class="hidden lg:block w-64 bg-white/5 rounded-lg p-6 shadow-lg shadow-black/20 self-start sticky top-4">
-            <h3 class="text-5xl font-bold text-white mb-2">19</h3>
-            <div class="text-sm font-medium text-white">Friday</div>
-            <div class="text-sm text-white opacity-80">September 2025</div>
-
-            <div class="mt-8 space-y-4">
-              <div class="flex items-start gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-euruko-yellow flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                <div class="text-sm text-white">
-                  <strong>Main event starts, bring Ruby</strong>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-euruko-yellow flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                </svg>
-                <div class="text-sm text-white">
-                  Main Hall
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-12 pt-8 border-t border-white/10">
-              <h4 class="font-semibold text-white mb-4">Speakers</h4>
-
-              <div class="flex items-center gap-3 mb-3">
-                <img src="images/speakers/speaker2.jpg" alt="Yukihiro Matsumoto" class="h-8 w-8 rounded-full">
-                <div class="text-sm text-white">Yukihiro Matsumoto</div>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <img src="images/speakers/speaker3.jpg" alt="Eileen Uchitelle" class="h-8 w-8 rounded-full">
-                <div class="text-sm text-white">Eileen Uchitelle</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add ticket button to Schedule section -->
-        <div class="mt-12 text-center">
-          <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
-            class="rounded-full bg-euruko-yellow px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
-            GRAB YOUR TICKET NOW
-          </a>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <!-- Sponsors section -->
-    <div id="sponsors" class="relative mobile-section-spacing lg:px-8">
+    <section id="sponsors" class="relative mobile-section-spacing lg:px-8" aria-labelledby="sponsors-heading">
       <div class="mx-auto max-w-7xl">
         <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
 
-        <h2 class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+        <h2 id="sponsors-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
           A BIG SHOUTOUT<br>TO OUR SPONSORS!
         </h2>
-
-        <!-- Platinum Sponsors -->
-        <div class="hidden">
-          <h3 class="text-center text-lg font-medium text-white mb-6">Platinum</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
-            <div class="flex h-24 items-center justify-center rounded-full bg-white px-8 sponsor-item">
-              <img src="images/sponsors/microsoft.png" alt="Microsoft" class="h-12">
-            </div>
-            <div class="flex h-24 items-center justify-center rounded-full bg-white px-8 sponsor-item">
-              <img src="images/sponsors/apple.png" alt="Apple" class="h-12">
-            </div>
-            <div class="flex h-24 items-center justify-center rounded-full bg-white px-8 sponsor-item">
-              <img src="images/sponsors/linux.png" alt="Linux Foundation" class="h-12">
-            </div>
-          </div>
-        </div>
-
-        <!-- Gold Sponsors -->
-        <div class="hidden">
-          <h3 class="text-center text-lg font-medium text-white mb-6">Gold</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
-            <div class="flex h-20 items-center justify-center rounded-full bg-white px-8 sponsor-item">
-              <img src="images/sponsors/linux.png" alt="Linux Foundation" class="h-10">
-            </div>
-            <div class="flex h-20 items-center justify-center rounded-full bg-white px-8 sponsor-item">
-              <img src="images/sponsors/microsoft.png" alt="Microsoft" class="h-10">
-            </div>
-          </div>
-        </div>
 
         <!-- Silver Sponsors -->
         <h3 class="text-center text-lg font-medium text-white mb-6">Silver</h3>
@@ -1045,28 +841,16 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Partners section -->
-    <div id="partners" class="relative mobile-section-spacing lg:px-8">
+    <section id="partners" class="relative mobile-section-spacing lg:px-8" aria-labelledby="partners-heading">
       <div class="mx-auto max-w-7xl">
         <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
 
-        <h2 class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+        <h2 id="partners-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
           OUR AMAZING PARTNERS
         </h2>
-
-        <!-- Organization Partner -->
-        <div class="hidden">
-          <h3 class="text-center text-lg font-medium text-white mb-6">Organization Partner</h3>
-          <div class="flex justify-center mb-12">
-            <a href="https://www.linkcb.pt" target="_blank" rel="noopener" class="block">
-              <div class="flex h-16 md:h-20 items-center justify-center rounded-full bg-black px-8 md:px-12 sponsor-item">
-                <img src="https://www.linkcb.pt/wp-content/uploads/2020/11/logo-1.png" alt="Link Cowork & Business" class="h-8 md:h-10">
-              </div>
-            </a>
-          </div>
-        </div>
 
         <!-- Community Partners -->
         <div>
@@ -1123,12 +907,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Accessibility section -->
-    <div id="accessibility" class="relative mobile-section-spacing lg:px-8">
+    <section id="accessibility" class="relative mobile-section-spacing lg:px-8" aria-labelledby="accessibility-heading">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+        <h2 id="accessibility-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
           ACCESSIBILITY
         </h2>
 
@@ -1178,14 +962,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Newsletter section -->
-    <div class="relative newsletter-section">
+    <section class="relative newsletter-section" aria-labelledby="newsletter-heading">
       <div class="mx-auto max-w-7xl">
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div class="lg:w-1/2">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 id="newsletter-heading" class="text-2xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl">
               DON'T MISS A MOMENT
             </h2>
             <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -1208,7 +992,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <!-- Updated footer layout to include map -->
@@ -1297,38 +1081,77 @@
   </footer>
 
   <script>
-    function toggleMobileMenu() {
+    // Initialize mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
       const mobileNavLinks = document.getElementById('mobileNavLinks');
-      const menuButton = document.querySelector('.mobile-menu-button');
+      const mobileNavLinksItems = mobileNavLinks.querySelectorAll('a');
       
-      mobileNavLinks.classList.toggle('active');
-      menuButton.classList.toggle('active');
-    }
-
-    function closeMobileMenu() {
-      const mobileNavLinks = document.getElementById('mobileNavLinks');
-      const menuButton = document.querySelector('.mobile-menu-button');
-      
-      mobileNavLinks.classList.remove('active');
-      menuButton.classList.remove('active');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const mobileNav = document.querySelector('.mobile-navbar');
-      const mobileNavLinks = document.getElementById('mobileNavLinks');
-      const menuButton = document.querySelector('.mobile-menu-button');
-      
-      if (!mobileNav.contains(event.target) && mobileNavLinks.classList.contains('active')) {
-        closeMobileMenu();
+      function toggleMobileMenu() {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle menu
+        mobileNavLinks.classList.toggle('active');
+        menuButton.classList.toggle('active');
+        
+        // Update ARIA attributes
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        
+        // Focus management
+        if (!isExpanded) {
+          // Menu is opening - focus first item
+          mobileNavLinksItems[0].focus();
+        } else {
+          // Menu is closing - focus button
+          menuButton.focus();
+        }
       }
-    });
-
-    // Close mobile menu on window resize to desktop
-    window.addEventListener('resize', function() {
-      if (window.innerWidth >= 768) {
-        closeMobileMenu();
+      
+      function closeMobileMenu() {
+        mobileNavLinks.classList.remove('active');
+        menuButton.classList.remove('active');
+        menuButton.setAttribute('aria-expanded', 'false');
       }
+      
+      // Event listeners
+      menuButton.addEventListener('click', toggleMobileMenu);
+      
+      // Close menu when clicking links
+      mobileNavLinksItems.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const mobileNav = document.querySelector('.mobile-navbar');
+        
+        if (!mobileNav.contains(event.target) && mobileNavLinks.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close mobile menu on window resize to desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+          closeMobileMenu();
+        }
+      });
+      
+      // Handle keyboard navigation
+      menuButton.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMobileMenu();
+        }
+      });
+      
+      // Handle escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNavLinks.classList.contains('active')) {
+          closeMobileMenu();
+          menuButton.focus();
+        }
+      });
     });
   </script>
 </body>

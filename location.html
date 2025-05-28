@@ -110,14 +110,14 @@
     /* Add focus styles for better accessibility */
     a:focus,
     button:focus {
-        outline: 2px solid #FFDF3A;
+        outline: 3px solid #FFDF3A;
         outline-offset: 2px;
         border-radius: 4px;
     }
 
     /* Improve contrast for better accessibility */
     .text-white.opacity-80 {
-        opacity: 0.9;
+        opacity: 0.95;
     }
 
     /* Add skip link for screen readers */
@@ -142,6 +142,30 @@
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    /* Improve touch targets for mobile */
+    @media (max-width: 767px) {
+        a, button {
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    /* Better color contrast for links */
+    .text-euruko-yellow {
+        color: #FFE55C; /* Slightly brighter for better contrast */
+    }
+
+    /* Improve focus visibility */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid #FFE55C;
+        outline-offset: 3px;
+        background-color: rgba(255, 229, 92, 0.1);
     }
 
     /* Location-specific styles */
@@ -267,9 +291,9 @@
     </section>
 
     <!-- Venue -->
-    <section id="venue" class="relative px-6 py-16 sm:py-12 lg:px-8 bg-white/5">
+    <section id="venue" class="relative px-6 py-16 sm:py-12 lg:px-8 bg-white/5" aria-labelledby="venue-heading">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-2xl font-bold tracking-tight text-white mb-12">CONFERENCE VENUE</h2>
+        <h2 id="venue-heading" class="text-2xl font-bold tracking-tight text-white mb-12">CONFERENCE VENUE</h2>
 
         <div class="lg:flex lg:items-center lg:gap-x-16">
           <div class="lg:w-1/2">
@@ -295,9 +319,9 @@
     </section>
 
     <!-- Accommodation -->
-    <section id="accommodation" class="relative px-6 py-16 sm:py-12 lg:px-8">
+    <section id="accommodation" class="relative px-6 py-16 sm:py-12 lg:px-8" aria-labelledby="accommodation-heading">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-2xl font-bold tracking-tight text-white mb-12">ACCOMMODATION</h2>
+        <h2 id="accommodation-heading" class="text-2xl font-bold tracking-tight text-white mb-12">ACCOMMODATION</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="card">
