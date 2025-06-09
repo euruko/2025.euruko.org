@@ -52,8 +52,8 @@
       right: 0;
       height: 100vh;
       /* Full viewport height */
-      opacity: 0.05;
-      /* Subtle overlay */
+      opacity: 0.02;
+      /* Even more subtle overlay for better contrast */
       z-index: 0;
       mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
       -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
@@ -71,9 +71,9 @@
 
     .bg-gradient-wrapper {
       background: linear-gradient(to bottom,
-          #eb4f59 0%,
-          #e23846 30%,
-          #CC1525 100%);
+          #d1424d 0%,
+          #c82f3d 30%,
+          #a81420 100%);
       background-attachment: local;
     }
 
@@ -150,7 +150,13 @@
 
     /* Improve contrast for better accessibility */
     .text-white.opacity-80 {
-        opacity: 0.95;
+        opacity: 1;
+    }
+    
+    /* Enhanced text shadow for better readability on background */
+    .hero-content h1,
+    .hero-content .text-white {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     /* Add skip link for screen readers */
@@ -660,121 +666,179 @@
     <section id="speakers" class="relative mobile-section-spacing lg:px-8" aria-labelledby="speakers-heading">
       <div class="mx-auto max-w-7xl">
         <h2 id="speakers-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white mb-8 md:mb-12 text-center">OUR SPEAKERS</h2>
-        <div class="speaker-grid" role="list" aria-label="Conference speakers">
-          <!-- Speaker cards -->
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/albert-pazderin.png" alt="Albert Pazderin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Albert Pazderin</h3>
-            <p class="speaker-talk">Building interactive Ruby gem tutorials with Wasm – yes, right in the browser!</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/alexander-baygeldin.png" alt="Alexander Baygeldin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Alexander Baygeldin</h3>
-            <p class="speaker-talk">Prioritization justice: lessons from making background jobs fair at scale</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/carmine-paolino.png" alt="Carmine Paolino" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Carmine Paolino</h3>
-            <p class="speaker-talk">RubyLLM: Making AI Development Beautiful Again</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/emiliano-della-casa.png" alt="Emiliano Della Casa" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Emiliano Della Casa</h3>
-            <p class="speaker-talk">gRPC on Ruby On Rails - a perfect match!</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/fritz-meissner.png" alt="Fritz Meissner" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Fritz Meissner</h3>
-            <p class="speaker-talk">How to improve your own and others' code</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/hitoshi-hasumi.png" alt="Hitoshi HASUMI" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Hitoshi HASUMI</h3>
-            <p class="speaker-talk">PicoRuby Hands-on: Internet of Things Edition</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/ivo-anjo.png" alt="Ivo Anjo" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Ivo Anjo</h3>
-            <p class="speaker-talk">How a Ruby profiler works: Stackprof under a microscope</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/joel-drapper.png" alt="Joel Drapper" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Joel Drapper</h3>
-            <p class="speaker-talk">Smoke and Mirrors: the Tricks Behind Magical Ruby Interfaces</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/julia-egorova.png" alt="Julia Egorova" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Julia Egorova</h3>
-            <p class="speaker-talk">Don't Be "Thread"-ened: Testing Multithreaded Code with Confidence</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/karen-jex.png" alt="Karen Jex" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Karen Jex</h3>
-            <p class="speaker-talk">Postgres Partitioning Best Practices</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/lucian-ghinda.png" alt="Lucian Ghinda" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Lucian Ghinda</h3>
-            <p class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/marco-roth.png" alt="Marco Roth" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Marco Roth</h3>
-            <p class="speaker-talk">Introducing ReActionView: A new ActionView-Compatible ERB Engine</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/obie-fernandez.png" alt="Obie Fernandez" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Obie Fernandez</h3>
-            <p class="speaker-talk">Roasting Code for Fun & Profit with Structured AI Workflows</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/pawel-strzalkowski.png" alt="Paweł Strzałkowski" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Paweł Strzałkowski</h3>
-            <p class="speaker-talk">Making Rails AI-Native with the Model Context Protocol</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/remy-hannequin.png" alt="Rémy Hannequin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Rémy Hannequin</h3>
-            <p class="speaker-talk">The hidden value of niche open-source projects</p>
-          </article>
-          <article class="speaker-card">
-            <div class="speaker-photo">
-              <img src="images/speakers/szymon-fiedler.png" alt="Szymon Fiedler" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
-            </div>
-            <h3 class="speaker-name">Szymon Fiedler</h3>
-            <p class="speaker-talk">Rewrite with confidence: validating business rules through isolated testing</p>
-          </article>
+        
+        <!-- Talks Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Talks</h3>
+          <div class="speaker-grid" role="list" aria-label="Conference speakers - Talks">
+            <!-- Obie Fernandez -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/obie-fernandez.png" alt="Obie Fernandez" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Obie Fernandez</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Principal Engineer at Shopify, USA</p>
+              <p class="speaker-talk">Roasting Code for Fun & Profit with Structured AI Workflows</p>
+            </article>
+
+            <!-- Rémy Hannequin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/remy-hannequin.png" alt="Rémy Hannequin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Rémy Hannequin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior developer at thoughtbot, France</p>
+              <p class="speaker-talk">The hidden value of niche open-source projects</p>
+            </article>
+
+            <!-- Ivo Anjo -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/ivo-anjo.png" alt="Ivo Anjo" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Ivo Anjo</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Engineer at Datadog, UK</p>
+              <p class="speaker-talk">How a Ruby profiler works: Stackprof under a microscope</p>
+            </article>
+
+            <!-- Emiliano Della Casa -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/emiliano-della-casa.png" alt="Emiliano Della Casa" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Emiliano Della Casa</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software Engineer at Studio Nexteering, Italy</p>
+              <p class="speaker-talk">gRPC on Ruby On Rails - a perfect match!</p>
+            </article>
+
+            <!-- Paweł Strzałkowski -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/pawel-strzalkowski.png" alt="Paweł Strzałkowski" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Paweł Strzałkowski</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Chief Technology Officer at Visuality, Poland</p>
+              <p class="speaker-talk">Making Rails AI-Native with the Model Context Protocol</p>
+            </article>
+
+            <!-- Julia Egorova -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/julia-egorova.png" alt="Julia Egorova" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Julia Egorova</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software engineer at Evil Martians, Georgia</p>
+              <p class="speaker-talk">Don't Be "Thread"-ened: Testing Multithreaded Code with Confidence</p>
+            </article>
+
+            <!-- Karen Jex -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/karen-jex.png" alt="Karen Jex" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Karen Jex</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Solutions Architect at Crunchy Data, France</p>
+              <p class="speaker-talk">Postgres Partitioning Best Practices</p>
+            </article>
+
+            <!-- Szymon Fiedler -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/szymon-fiedler.png" alt="Szymon Fiedler" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Szymon Fiedler</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Software Engineer at Arkency, Poland</p>
+              <p class="speaker-talk">Rewrite with confidence: validating business rules through isolated testing</p>
+            </article>
+
+            <!-- Albert Pazderin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/albert-pazderin.png" alt="Albert Pazderin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Albert Pazderin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Backend developer at Evil Martians, Georgia</p>
+              <p class="speaker-talk">Building interactive Ruby gem tutorials with Wasm – yes, right in the browser!</p>
+            </article>
+
+            <!-- Alexander Baygeldin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/alexander-baygeldin.png" alt="Alexander Baygeldin" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Alexander Baygeldin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Backend Engineer at Evil Martians, Portugal</p>
+              <p class="speaker-talk">Prioritization justice: lessons from making background jobs fair at scale</p>
+            </article>
+
+            <!-- Carmine Paolino -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/carmine-paolino.png" alt="Carmine Paolino" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Carmine Paolino</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Founder and CEO at Chat with Work, Germany</p>
+              <p class="speaker-talk">RubyLLM: Making AI Development Beautiful Again</p>
+            </article>
+
+            <!-- Marco Roth -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/marco-roth.png" alt="Marco Roth" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Marco Roth</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Full-Stack Ruby on Rails Developer, Switzerland</p>
+              <p class="speaker-talk">Introducing ReActionView: A new ActionView-Compatible ERB Engine</p>
+            </article>
+          </div>
         </div>
+
+        <!-- Workshops Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Workshops</h3>
+          <div class="speaker-grid" role="list" aria-label="Conference speakers - Workshops">
+            <!-- Hitoshi HASUMI -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/hitoshi-hasumi.png" alt="Hitoshi HASUMI" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Hitoshi HASUMI</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Creator of PicoRuby, Japan</p>
+              <p class="speaker-talk">PicoRuby Hands-on: Internet of Things Edition</p>
+            </article>
+
+            <!-- Joel Drapper -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/joel-drapper.png" alt="Joel Drapper" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Joel Drapper</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software engineer at Plane, UK</p>
+              <p class="speaker-talk">Smoke and Mirrors: the Tricks Behind Magical Ruby Interfaces</p>
+            </article>
+
+            <!-- Fritz Meissner -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/fritz-meissner.png" alt="Fritz Meissner" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Fritz Meissner</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Development Team Lead at thoughtbot, UK</p>
+              <p class="speaker-talk">How to improve your own and others' code</p>
+            </article>
+
+            <!-- Lucian Ghinda -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/lucian-ghinda.png" alt="Lucian Ghinda" class="w-full h-full object-cover" width="125" height="125" loading="lazy">
+              </div>
+              <h3 class="speaker-name">Lucian Ghinda</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Product Engineer, Romania</p>
+              <p class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</p>
+            </article>
+          </div>
+        </div>
+
         <div class="mt-12 text-center">
           <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
             class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
