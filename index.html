@@ -196,8 +196,8 @@
 
     /* Improve layout stability */
     .speaker-photo {
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
         aspect-ratio: 1;
     }
 
@@ -252,9 +252,9 @@
 
     .speaker-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        max-width: 320px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -281,14 +281,14 @@
     .speaker-card {
       background: rgba(255,255,255,0.08);
       border-radius: 1.5rem;
-      padding: 2rem 1rem 1.5rem 1rem;
+      padding: 1.5rem 0.75rem 1.25rem 0.75rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
-      margin: 0.5rem auto;
-      max-width: 260px;
+      margin: 0 auto;
+      max-width: 100%;
       position: relative;
     }
     .speaker-photo {
@@ -344,7 +344,17 @@
 
         .speaker-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
             max-width: none;
+        }
+
+        .speaker-photo {
+            width: 110px;
+            height: 110px;
+        }
+
+        .speaker-card {
+            padding: 1.75rem 1rem 1.5rem 1rem;
         }
 
         .hero-content h1 {
@@ -366,13 +376,14 @@
 
         .speaker-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
             max-width: none;
             margin: 0;
         }
 
         .speaker-photo {
-            width: 150px;
-            height: 150px;
+            width: 125px;
+            height: 125px;
         }
 
         .schedule-item {
@@ -667,6 +678,21 @@
       <div class="mx-auto max-w-7xl">
         <h2 id="speakers-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white mb-8 md:mb-12 text-center">OUR SPEAKERS</h2>
         
+        <!-- Keynotes Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Keynotes</h3>
+          <div class="speaker-grid" role="list" aria-label="Conference speakers - Keynotes">
+            <!-- Yukihiro "Matz" Matsumoto -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/matz.jpg" alt="Yukihiro Matsumoto (Matz)" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Yukihiro "Matz" Matsumoto</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Creator of Ruby, Japan</p>
+            </article>
+          </div>
+        </div>
+
         <!-- Talks Section -->
         <div class="mb-16">
           <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Talks</h3>
