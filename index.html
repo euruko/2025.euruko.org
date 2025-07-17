@@ -291,6 +291,46 @@
       max-width: 100%;
       position: relative;
     }
+
+    /* Dual speaker workshop styles */
+    .dual-speaker-card {
+      padding: 2rem 1rem 1.5rem 1rem;
+    }
+
+    .dual-speaker-photos {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      height: 125px;
+      width: 200px;
+    }
+
+    .speaker-photo-left,
+    .speaker-photo-right {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .speaker-photo-left {
+      left: 0;
+      z-index: 2;
+    }
+
+    .speaker-photo-right {
+      right: 0;
+      z-index: 1;
+    }
+
+    .dual-speaker-names {
+      text-align: center;
+    }
+
+    .dual-speaker-bios {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
     .speaker-photo {
       width: 125px;
       height: 125px;
@@ -602,7 +642,7 @@
 
                 <!-- Workshops -->
                 <div class="flex flex-col items-center text-center">
-                  <div class="text-3xl md:text-4xl font-extrabold text-euruko-yellow">4</div>
+                  <div class="text-3xl md:text-4xl font-extrabold text-euruko-yellow">5</div>
                   <p class="mt-1 text-sm md:text-base font-medium text-white">Workshops</p>
                 </div>
 
@@ -889,6 +929,25 @@
               <h3 class="speaker-name">Lucian Ghinda</h3>
               <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Product Engineer, Romania</p>
               <p class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</p>
+            </article>
+            <!-- Anders Bälter & Patrik Ragnarsson - Dual Speaker Workshop -->
+            <article class="speaker-card dual-speaker-card">
+              <div class="dual-speaker-photos">
+                <div class="speaker-photo speaker-photo-left">
+                  <img src="images/speakers/anders.jpeg" alt="Anders Bälter" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+                <div class="speaker-photo speaker-photo-right">
+                  <img src="images/speakers/patrik.jpeg" alt="Patrik Ragnarsson" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+              </div>
+              <div class="dual-speaker-names">
+                <h3 class="speaker-name">Anders Bälter & Patrik Ragnarsson</h3>
+              </div>
+              <div class="dual-speaker-bios">
+                <p class="speaker-bio text-white opacity-70 text-sm mb-1 text-center">Anders: CTO at 84codes</p>
+                <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Patrik: Developer at 84codes and maintainer of Sinatra & Puma</p>
+              </div>
+              <p class="speaker-talk">Microservices in Action, Hands-on with Message Queues: Build and Connect Microservices with AMQP</p>
             </article>
           </div>
         </div>
