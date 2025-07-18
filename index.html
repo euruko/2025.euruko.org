@@ -357,6 +357,15 @@
       letter-spacing: 0.01em;
     }
 
+    /* Special styling for Matz's card to compensate for shorter text */
+    .matz-card .speaker-name {
+      font-size: 1.25rem;
+    }
+    
+    .matz-card .speaker-bio {
+      font-size: 1rem;
+    }
+
     .schedule-day-tabs {
         display: flex;
         justify-content: center;
@@ -446,6 +455,15 @@
         .mobile-text-lg {
             font-size: 1.125rem;
             line-height: 1.75;
+        }
+
+        /* Enhanced font sizes for Matz's card on larger screens */
+        .matz-card .speaker-name {
+            font-size: 1.35rem;
+        }
+        
+        .matz-card .speaker-bio {
+            font-size: 1.125rem;
         }
     }
 
@@ -722,7 +740,7 @@
           <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Keynotes</h3>
           <div class="speaker-grid" role="list" aria-label="Conference speakers - Keynotes">
             <!-- Yukihiro "Matz" Matsumoto -->
-            <article class="speaker-card">
+            <article class="speaker-card matz-card">
               <div class="speaker-photo">
                 <img src="images/speakers/matz.jpg" alt="Yukihiro Matsumoto (Matz)" class="w-full h-full object-cover" width="125" height="125">
               </div>
@@ -1127,6 +1145,11 @@
             <a href="https://helvetic-ruby.ch" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
               <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
                 <img src="/images/partners/helvetic-ruby.svg" alt="Helvetic Ruby" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://rubyconf.at" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/rubyconf-at.jpeg" alt="RubyConf AT" class="max-h-12 max-w-full object-contain" width="120" height="48">
               </div>
             </a>
           </div>
