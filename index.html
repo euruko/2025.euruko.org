@@ -554,14 +554,14 @@
     <!-- Mobile navigation -->
     <nav class="md:hidden mobile-navbar border-b border-white/10" aria-label="Mobile">
       <div class="flex items-center space-x-8">
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
         <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Speakers
         </a>
         <a href="#sponsors" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Sponsors
-        </a>
-        <a href="#accessibility" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
-          Accessibility
         </a>
       </div>
       <div class="flex items-center gap-4">
@@ -578,6 +578,9 @@
       
       <!-- Mobile menu dropdown -->
       <div class="mobile-nav-links" id="mobileNavLinks" role="menu" aria-labelledby="mobile-menu-button">
+        <a href="about.html" class="text-white hover:text-euruko-yellow" role="menuitem">
+          About
+        </a>
         <a href="#speakers" class="text-white hover:text-euruko-yellow" role="menuitem">
           Speakers
         </a>
@@ -593,6 +596,9 @@
     <!-- Desktop navigation -->
     <nav class="hidden md:flex items-center justify-between border-b border-white/10 px-6 py-3" aria-label="Global">
       <div class="flex items-center space-x-8">
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
         <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Speakers
         </a>
@@ -739,6 +745,9 @@
         <div class="mb-16">
           <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Keynotes</h3>
           <div class="speaker-grid" role="list" aria-label="Conference speakers - Keynotes">
+            <!-- Spacer card for centering keynotes on larger screens -->
+            <div class="hidden md:block" aria-hidden="true"></div>
+            
             <!-- Yukihiro "Matz" Matsumoto -->
             <article class="speaker-card matz-card">
               <div class="speaker-photo">
@@ -1381,6 +1390,7 @@
           <!-- Links -->
           <div class="text-center lg:text-left">
             <ul class="space-y-2">
+              <li><a href="about.html" class="text-xs text-gray-700 hover:text-gray-900">About</a></li>
               <li><a href="#speakers" class="text-xs text-gray-700 hover:text-gray-900">Speakers</a></li>
               <li><a href="#sponsors" class="text-xs text-gray-700 hover:text-gray-900">Sponsors</a></li>
               <li><a href="#accessibility" class="text-xs text-gray-700 hover:text-gray-900">Accessibility</a></li>
