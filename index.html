@@ -258,6 +258,15 @@
         margin: 0 auto;
     }
 
+    /* Workshops grid - single column on mobile for better spacing */
+    .workshops-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     /* Mobile-specific improvements */
     .mobile-hero-spacing {
         padding: 2rem 1rem;
@@ -397,6 +406,12 @@
             max-width: none;
         }
 
+        .workshops-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: none;
+        }
+
         .speaker-photo {
             width: 110px;
             height: 110px;
@@ -424,6 +439,13 @@
         }
 
         .speaker-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: none;
+            margin: 0;
+        }
+
+        .workshops-grid {
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
             max-width: none;
@@ -923,7 +945,7 @@
         <!-- Workshops Section -->
         <div class="mb-16">
           <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Workshops</h3>
-          <div class="speaker-grid" role="list" aria-label="Conference speakers - Workshops">
+          <div class="workshops-grid" role="list" aria-label="Conference speakers - Workshops">
             <!-- Fritz Meissner -->
             <article class="speaker-card">
               <div class="speaker-photo">
