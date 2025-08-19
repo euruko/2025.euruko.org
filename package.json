@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist/*",
-    "copy:html": "cp index.html dist/",
+    "copy:html": "cp *.html dist/",
     "copy:images": "mkdir -p dist/images && cp -r src/images/* dist/images/",
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
     "build": "npm run clean && npm run build:css && npm run copy:html && npm run copy:images",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "watch:html": "nodemon --watch index.html --exec 'npm run copy:html'",
+    "watch:html": "nodemon --watch . --ext html --ignore dist/ --exec 'npm run copy:html'",
     "serve": "browser-sync start --server 'dist' --files 'dist/**/*' --no-notify",
     "dev": "npm run build && npm-run-all --parallel watch:css watch:html serve"
   },
