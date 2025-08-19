@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Euruko 2025 - The Heart of Code | Viana do Castelo, Portugal</title>
+  <title>CFP Review Committee - Euruko 2025 | Viana do Castelo, Portugal</title>
   <meta name="description"
-    content="Everything you need to know about Euruko 2025 in Viana do Castelo, Portugal. Conference dates, venue, travel, accommodation, and local activities.">
+    content="Meet the CFP Review Committee for Euruko 2025. A diverse group of Ruby experts from around the world who curated our amazing program from 148 submissions.">
 
   <!-- Preconnect to external domains for performance -->
   <link rel="preconnect" href="https://ti.to">
@@ -20,19 +20,19 @@
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://2025.euruko.org/about">
-  <meta property="og:title" content="About Euruko 2025 - The Heart of Code | Viana do Castelo, Portugal">
+  <meta property="og:url" content="https://2025.euruko.org/cfp">
+  <meta property="og:title" content="CFP Review Committee - Euruko 2025 | Viana do Castelo, Portugal">
   <meta property="og:description"
-    content="Everything you need to know about Euruko 2025 in Viana do Castelo, Portugal. Conference dates, venue, travel, accommodation, and local activities.">
+    content="Meet the CFP Review Committee for Euruko 2025. A diverse group of Ruby experts from around the world who curated our amazing program from 148 submissions.">
   <meta property="og:image" content="/images/banner.jpeg">
   <meta property="og:image:alt" content="Euruko 2025 Conference Banner">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@euruko">
-  <meta name="twitter:title" content="About Euruko 2025 - The Heart of Code">
+  <meta name="twitter:title" content="CFP Review Committee - Euruko 2025">
   <meta name="twitter:description"
-    content="Everything you need to know about Euruko 2025 in Viana do Castelo, Portugal. Conference dates, venue, travel, accommodation, and local activities.">
+    content="Meet the CFP Review Committee for Euruko 2025. A diverse group of Ruby experts from around the world who curated our amazing program from 148 submissions.">
   <meta name="twitter:image" content="/images/banner.jpeg">
 
   <link href="output.css" rel="stylesheet">
@@ -42,7 +42,6 @@
     /* Replace the dot pattern with an image background */
     .bg-image-pattern {
       background-image: url('images/white-pattern-bg.png');
-      /* Use existing image name */
       background-size: cover;
       background-position: top center;
       background-repeat: no-repeat;
@@ -51,9 +50,7 @@
       left: 0;
       right: 0;
       height: 100vh;
-      /* Full viewport height */
       opacity: 0.02;
-      /* Even more subtle overlay for better contrast */
       z-index: 0;
       mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
       -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
@@ -128,13 +125,12 @@
       transform: translate(-30%, -30%) rotate(15deg);
     }
 
-    /* Prevent horizontal scrolling on mobile - FIXED: Only apply to body and with more specific targeting */
+    /* Prevent horizontal scrolling on mobile */
     body {
         overflow-x: hidden;
         max-width: 100%;
     }
 
-    /* Ensure we don't break vertical scrolling on any OS/browser */
     html {
         overflow-y: auto;
         max-width: 100%;
@@ -146,41 +142,6 @@
         outline: 3px solid #FFE55C;
         outline-offset: 2px;
         border-radius: 4px;
-    }
-
-    /* Improve contrast for better accessibility */
-    .text-white.opacity-80 {
-        opacity: 1;
-    }
-    
-    /* Enhanced text shadow for better readability on background */
-    .hero-content h1,
-    .hero-content .text-white {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Add skip link for screen readers */
-    .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #FFE55C;
-        color: black;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 100;
-        border-radius: 4px;
-        font-weight: bold;
-    }
-
-    .skip-link:focus {
-        top: 6px;
-    }
-
-    /* Make images more responsive */
-    img {
-        max-width: 100%;
-        height: auto;
     }
 
     /* Mobile hamburger menu */
@@ -213,7 +174,6 @@
         transform: translateZ(0) rotate(45deg) translate(-5px, -6px);
     }
 
-    /* Add hardware acceleration to transitions */
     .mobile-menu-button span {
         will-change: transform, opacity;
         transform: translateZ(0);
@@ -237,12 +197,6 @@
     .mobile-text-lg {
         font-size: 1rem;
         line-height: 1.6;
-    }
-
-    .mobile-button {
-        padding: 0.875rem 1.5rem;
-        font-size: 0.875rem;
-        min-height: 44px; /* Better touch target */
     }
 
     /* Small mobile improvements */
@@ -319,86 +273,120 @@
             border-bottom: none;
         }
 
-        .mobile-ticket-button {
-            margin-top: 1rem;
-            display: block;
-            text-align: center;
-        }
-
-        /* Hide desktop nav links on mobile, show only ticket button */
         .mobile-navbar .flex.items-center.space-x-8 {
             display: none;
         }
     }
 
-    /* About page specific styles */
-    .about-section {
+    /* CFP page specific styles */
+    .committee-member {
         background: rgba(255,255,255,0.05);
-        border-radius: 1rem;
-        padding: 2rem;
-        margin-bottom: 2rem;
+        border-radius: 1.5rem;
+        padding: 2rem 1rem 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+        margin: 0 auto;
+        max-width: 100%;
+        position: relative;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
     }
 
-    .about-section h3 {
-        color: #FFE55C;
+    .committee-member:hover {
+        background: rgba(255,255,255,0.08);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);
+    }
+
+    .committee-photo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1.5rem auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15);
+        background: #fff;
+    }
+
+    .committee-name {
         font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 0.5rem;
     }
 
-    .emoji-header {
-        font-size: 1.5rem;
-        margin-right: 0.5rem;
+    .committee-role {
+        color: #FFE55C;
+        text-align: center;
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
     }
 
-    .info-grid {
+    .committee-location {
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .committee-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 480px) {
+        .committee-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
     }
 
     @media (min-width: 768px) {
-        .info-grid {
-            grid-template-columns: repeat(2, 1fr);
+        .committee-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
         }
     }
 
     @media (min-width: 1024px) {
-        .info-grid {
-            grid-template-columns: repeat(3, 1fr);
+        .committee-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
         }
     }
 
-    .price-tag {
+    .intro-section {
+        background: rgba(255,255,255,0.05);
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .stats-highlight {
         background: #FFE55C;
         color: #000;
         padding: 0.25rem 0.5rem;
         border-radius: 0.5rem;
-        font-weight: 600;
-        font-size: 0.875rem;
-    }
-
-    .travel-option {
-        background: rgba(255,255,255,0.1);
-        padding: 1rem;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .venue-image {
-        border-radius: 1rem;
-        overflow: hidden;
-        margin: 1rem 0;
+        font-weight: 700;
+        font-size: 1.1rem;
     }
   </style>
 </head>
 
 <body class="flex h-full flex-col bg-[#CC1525] w-full">
-  <!-- Skip link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
   <div class="bg-gradient-wrapper absolute inset-0 h-full"></div>
 
   <!-- Background image overlay with fade-out -->
@@ -414,11 +402,11 @@
         <a href="index.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Home
         </a>
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
         <a href="index.html#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Speakers
-        </a>
-        <a href="cfp.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
-          CFP
         </a>
       </div>
       <div class="flex items-center gap-4">
@@ -438,6 +426,9 @@
         <a href="index.html" class="text-white hover:text-euruko-yellow" role="menuitem">
           Home
         </a>
+        <a href="about.html" class="text-white hover:text-euruko-yellow" role="menuitem">
+          About
+        </a>
         <a href="index.html#speakers" class="text-white hover:text-euruko-yellow" role="menuitem">
           Speakers
         </a>
@@ -446,9 +437,6 @@
         </a>
         <a href="index.html#accessibility" class="text-white hover:text-euruko-yellow" role="menuitem">
           Accessibility
-        </a>
-        <a href="cfp.html" class="text-white hover:text-euruko-yellow" role="menuitem">
-          CFP Committee
         </a>
       </div>
     </nav>
@@ -459,6 +447,9 @@
         <a href="index.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Home
         </a>
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
         <a href="index.html#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Speakers
         </a>
@@ -468,9 +459,6 @@
         <a href="index.html#accessibility" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
           Accessibility
         </a>
-        <a href="cfp.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
-          CFP
-        </a>
       </div>
       <div>
         <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
@@ -479,289 +467,229 @@
         </a>
       </div>
     </nav>
+
+    <!-- Hero section -->
+    <div class="relative">
+      <div class="mx-auto max-w-7xl mobile-hero-spacing md:px-6 md:py-12 sm:py-16 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div class="mb-6 md:mb-0 md:w-1/2 flex justify-center">
+            <img src="images/logo-red.svg" alt="Euruko 2025" class="w-full max-w-[280px] md:max-w-md h-auto" width="300" height="200" loading="eager" fetchpriority="high">
+          </div>
+          <div class="text-center md:w-1/2 hero-content">
+            <h1 class="font-bold tracking-tight text-white mb-4">
+              CFP REVIEW COMMITTEE
+            </h1>
+            <p class="text-lg text-white opacity-90 mb-8">
+              Meet the dedicated Ruby experts who curated our amazing program
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main id="main-content" class="flex-1 relative z-10">
-    <!-- Welcome section -->
+    <!-- Introduction section -->
     <section class="relative mobile-section-spacing lg:px-8">
       <div class="mx-auto max-w-6xl">
-        <div class="text-center mb-4">
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">Welcome</h2>
-          <p class="text-xl md:text-2xl text-white opacity-90">
-            Viana do Castelo — a jewel of Portugal, ready to host the gems of the Ruby world.
+        <div class="intro-section">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6">
+            Built by the Community, for the Community 💛
+          </h2>
+          <p class="text-lg text-white opacity-90 mb-4">
+            Our program for Euruko 2025 was carefully curated by a diverse and dedicated group of reviewers from all over the world.
           </p>
-          <p class="text-xl md:text-2xl text-white opacity-90">
-            This year, the Heart of Code beats with elegance, tradition, and innovation.
+          <p class="text-lg text-white opacity-90 mb-6">
+            From <span class="stats-highlight">148 submissions</span>, <span class="stats-highlight">18 were selected</span> — and behind that incredible curation is this amazing committee.
+          </p>
+          <p class="text-base text-white opacity-80">
+            🌍 From the USA, Portugal, UK, Poland, Spain, Austria, Romania, Lithuania, and Brazil — united by one shared passion: <strong>Ruby!</strong>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Mark Your Calendars section -->
+    <!-- Committee Members section -->
     <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">📅</span>Mark Your Calendars
+      <div class="mx-auto max-w-7xl">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-12 text-center">
+          Thank You, Review Committee — You're the 💛 of Euruko 2025
         </h2>
+        
+        <div class="committee-grid">
+          <!-- Adrian Marin -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/adrian.jpg" alt="Adrian Marin" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Adrian Marin</h3>
+            <p class="committee-role">Founder & CEO at Avo, Host of Friendly.rb</p>
+            <p class="committee-location">Romania</p>
+          </article>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-          <!-- Official Conference Days -->
-          <div class="about-section">
-            <h3>Official Conference Days</h3>
-            <p class="text-white text-lg font-semibold mb-2">September 18-19, 2025</p>
-            <p class="text-white opacity-80 mb-2">9:00 AM - 6:00 PM each day</p>
-            <p class="text-white opacity-80">Plus social events in the evening</p>
-          </div>
+          <!-- Alessandro Brückheimer -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/alessandro.jpg" alt="Alessandro Brückheimer" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Alessandro Brückheimer</h3>
+            <p class="committee-role">Senior Software Engineer at AURENA Tech</p>
+            <p class="committee-location">Austria</p>
+          </article>
 
-          <!-- Ruby Safari -->
-          <div class="about-section">
-            <h3>Ruby Safari</h3>
-            <p class="text-white text-lg font-semibold mb-2">September 20, 2025</p>
-            <p class="text-white opacity-80 mb-2">09:00 - 13:30</p>
-            <p class="text-white opacity-80">Guided walking tour around Viana do Castelo, exploring local gems and hidden spots. Optional complementary activity.</p>
-          </div>
+          <!-- Ali Krynitsky -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/ali.jpg" alt="Ali Krynitsky" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Ali Krynitsky</h3>
+            <p class="committee-role">CEO at Robatz Network, VilniusRB & Baltic Ruby Organiser</p>
+            <p class="committee-location">Lithuania</p>
+          </article>
+
+          <!-- Bruno Gerotto -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/bruno.jpg" alt="Bruno Gerotto" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Bruno Gerotto</h3>
+            <p class="committee-role">Senior Software Engineer at Job&Talent</p>
+            <p class="committee-location">Portugal</p>
+          </article>
+
+          <!-- Marcelo Menezes -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/marcelo.jpg" alt="Marcelo Menezes" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Marcelo Menezes</h3>
+            <p class="committee-role">Principal Engineer at BSPK - Unified Commerce, Powered by AI</p>
+            <p class="committee-location">Brazil</p>
+          </article>
+
+          <!-- Mariusz Koziel -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/mariusz.jpg" alt="Mariusz Koziel" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Mariusz Koziel</h3>
+            <p class="committee-role">CEO at Visuality, Founder of Ruby Europe & PLRUG</p>
+            <p class="committee-location">Poland</p>
+          </article>
+
+          <!-- Mike Hickman -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/mike.jpg" alt="Mike Hickman" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Mike Hickman</h3>
+            <p class="committee-role">Software Engineer & Founder at chuggingcoffee.dev</p>
+            <p class="committee-location">USA</p>
+          </article>
+
+          <!-- Muhamed Isabegovic -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/muhamed.jpg" alt="Muhamed Isabegovic" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Muhamed Isabegovic</h3>
+            <p class="committee-role">Tech Lead at Carv, Founder RubyConf Austria & Euruko 2024</p>
+            <p class="committee-location">Austria</p>
+          </article>
+
+          <!-- Pedro Carmona -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/pedro-carmona.jpg" alt="Pedro Carmona" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Pedro Carmona</h3>
+            <p class="committee-role">Software Engineer at Impactpool</p>
+            <p class="committee-location">Portugal</p>
+          </article>
+
+          <!-- Pedro Torres -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/pedro-torres.jpg" alt="Pedro Torres" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Pedro Torres</h3>
+            <p class="committee-role">Senior Engineering Leader at Salsify</p>
+            <p class="committee-location">Portugal</p>
+          </article>
+
+          <!-- Rosa Gutierrez -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/rosa.jpg" alt="Rosa Gutierrez" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Rosa Gutierrez</h3>
+            <p class="committee-role"> Software Engineer at 37signals </p>
+            <p class="committee-location">Spain</p>
+          </article>
+
+          <!-- Sarah Eggleston -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/sarah.jpg" alt="Sarah Eggleston" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Sarah Eggleston</h3>
+            <p class="committee-role">Founder at fflow & Member of WNB.rb</p>
+            <p class="committee-location">UK</p>
+          </article>
+
+          <!-- Sergy Sergyenko -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/sergy.jpg" alt="Sergy Sergyenko" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Sergy Sergyenko</h3>
+            <p class="committee-role">CEO of Cybergizer & Host of BalticRuby</p>
+            <p class="committee-location">Lithuania</p>
+          </article>
+
+          <!-- Vladimir Dementyev -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/vladimir.jpg" alt="Vladimir Dementyev" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Vladimir Dementyev</h3>
+            <p class="committee-role">Principal Backend Engineer at Evil Martians</p>
+            <p class="committee-location">USA</p>
+          </article>
+
+          <!-- Zuzanna Kusznir -->
+          <article class="committee-member">
+            <div class="committee-photo">
+              <img src="images/cfp/zuzanna.jpg" alt="Zuzanna Kusznir" class="w-full h-full object-cover" width="120" height="120">
+            </div>
+            <h3 class="committee-name">Zuzanna Kusznir</h3>
+            <p class="committee-role">Ruby on Rails Developer at Momentum</p>
+            <p class="committee-location">Poland</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Venue section -->
-    <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">📍</span>Venue: Centro Cultural de Viana do Castelo
-        </h2>
-
-        <div class="about-section">
-          <p class="text-white opacity-80 mb-4">
-            <strong class="text-white">Address:</strong><br>
-            Praça Marques Júnior, R. Manuel Espregueira 269<br>
-            4900-344 Viana do Castelo, Portugal
-          </p>
-          <p class="text-white opacity-80 mb-4">
-            Historic cultural center in the heart of Viana do Castelo, offering modern facilities in a beautiful setting.
-          </p>
-          <a href="https://maps.app.goo.gl/RnJqmDhkChpUmJSj9" target="_blank" rel="noopener" 
-             class="rounded-full bg-euruko-yellow px-4 py-2 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
-            📍 View on Map
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Plan Your Trip section -->
-    <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">✈️</span>Plan Your Trip to Viana do Castelo
-        </h2>
-
-        <!-- Suggested Dates -->
-        <div class="about-section mb-6">
-          <h3>📅 Suggested Dates</h3>
-          <p class="text-white text-lg font-semibold mb-2">September 17-21, 2025</p>
-          <p class="text-white opacity-80">Arrive Wednesday, depart Sunday for the full experience including Ruby Safari.</p>
-        </div>
-
-        <!-- Getting There -->
-        <div class="info-grid">
-          <div class="about-section">
-            <h3>🛫 Getting There</h3>
-            <div class="travel-option">
-              <h4 class="text-white font-semibold mb-2">Porto Airport (OPO)</h4>
-              <p class="text-white opacity-80 text-sm mb-2">Main international gateway</p>
-              <p class="text-white opacity-80 text-sm">~45 minutes to Viana do Castelo</p>
-            </div>
-            <div class="travel-option">
-              <h4 class="text-white font-semibold mb-2">Direct Bus</h4>
-              <p class="text-white opacity-80 text-sm mb-1">Rede Expressos from OPO airport</p>
-              <span class="price-tag">€4-10 per journey</span>
-            </div>
-            <div class="travel-option">
-              <h4 class="text-white font-semibold mb-2">Shuttle Transfer</h4>
-              <p class="text-white opacity-80 text-sm mb-1">Free group transfers Sept 17 & 20</p>
-              <p class="text-white opacity-80 text-sm">Details to be announced</p>
-            </div>
-          </div>
-
-          <!-- Accommodation -->
-          <div class="about-section">
-            <h3>🏨 Accommodation</h3>
-            <p class="text-white opacity-80 mb-4">
-              Dozens of hotels, guesthouses, and B&Bs within walking distance of the venue.
-            </p>
-            <p class="text-white opacity-80 mb-2">
-              <strong class="text-white">Search tip:</strong> Use "Centro Cultural de Viana do Castelo" on booking platforms.
-            </p>
-            <p class="text-white opacity-80">
-              Any place within 1km should be comfortable to walk.
-            </p>
-          </div>
-
-          <!-- Local Transport -->
-          <div class="about-section">
-            <h3>🚌 Local Transport</h3>
-            <div class="travel-option">
-              <h4 class="text-white font-semibold mb-2">Walking</h4>
-              <p class="text-white opacity-80 text-sm">Historic city center is very walkable</p>
-            </div>
-            <div class="travel-option">
-              <h4 class="text-white font-semibold mb-2">Taxi / Rideshare</h4>
-              <p class="text-white opacity-80 text-sm">Available throughout the city</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Local Activities section -->
-    <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">🌟</span>Plan Your Stay in Viana do Castelo
-        </h2>
-
-        <div class="info-grid">
-          <!-- Historic Center Walk -->
-          <div class="about-section">
-            <h3>🏛️ Historic Center Walk</h3>
-            <p class="text-white text-sm mb-2">⏱️ 1-2 hours 🚶 Easy walk</p>
-            <p class="text-white opacity-80">
-              Explore the beautiful historic center with its traditional Portuguese architecture, charming squares, and local shops.
-            </p>
-          </div>
-
-          <!-- Santa Luzia Sanctuary -->
-          <div class="about-section">
-            <h3>⛪ Santa Luzia Sanctuary</h3>
-            <p class="text-white text-sm mb-2">⏱️ Half day 🚗 Short drive</p>
-            <p class="text-white opacity-80">
-              Visit the hilltop sanctuary for breathtaking views over Viana do Castelo and the coast. Accessible by car or taxi for those who prefer not to walk uphill.
-            </p>
-          </div>
-
-          <!-- Beach Activities -->
-          <div class="about-section">
-            <h3>🏖️ Coastal Activities</h3>
-            <p class="text-white text-sm mb-2">⏱️ Half/Full day 🚗 Short drive</p>
-            <p class="text-white opacity-80">
-              Enjoy beautiful beaches, nautical sports, and coastal walks. Perfect for families and outdoor enthusiasts.
-            </p>
-          </div>
-
-          <!-- Regional Exploration -->
-          <div class="about-section">
-            <h3>🌿 Minho Region</h3>
-            <p class="text-white text-sm mb-2">⏱️ Full day 🚗 Day trips</p>
-            <p class="text-white opacity-80">
-              Explore the broader Minho region with its green landscapes, traditional villages, and excellent gastronomy.
-            </p>
-          </div>
-
-          <!-- Porto Day Trip -->
-          <div class="about-section">
-            <h3>🌉 Porto Adventure</h3>
-            <p class="text-white text-sm mb-2">⏱️ Full day 🚌 1 hour by bus</p>
-            <p class="text-white opacity-80">
-              Visit Porto, Portugal's second city, famous for its port wine, historic center, and beautiful riverside views.
-            </p>
-          </div>
-
-          <!-- Food & Wine -->
-          <div class="about-section">
-            <h3>🍷 Gastronomy</h3>
-            <p class="text-white text-sm mb-2">⏱️ Anytime 🍽️ Local cuisine</p>
-            <p class="text-white opacity-80">
-              Experience authentic Portuguese cuisine, fresh seafood, and the famous Vinho Verde wines of the region.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Weather section -->
-    <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">🌤️</span>September Weather in Viana do Castelo
-        </h2>
-
-        <div class="about-section">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <h4 class="text-euruko-yellow font-semibold mb-2">Expected Temperature</h4>
-              <p class="text-white opacity-80">22°C/72°F highs</p>
-              <p class="text-white opacity-80">15°C/59°F lows</p>
-            </div>
-            <div>
-              <h4 class="text-euruko-yellow font-semibold mb-2">Conditions</h4>
-              <p class="text-white opacity-80">Mostly sunny</p>
-              <p class="text-white opacity-80">Possible light rain</p>
-            </div>
-            <div>
-              <h4 class="text-euruko-yellow font-semibold mb-2">What to Pack</h4>
-              <p class="text-white opacity-80">Layers (t-shirt + light jacket)</p>
-              <p class="text-white opacity-80">Comfortable walking shoes</p>
-              <p class="text-white opacity-80">Light rain jacket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Accessibility section -->
-    <section class="relative mobile-section-spacing lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-8 text-center">
-          <span class="emoji-header">♿</span>Accessibility
-        </h2>
-
-        <div class="info-grid">
-          <div class="about-section">
-            <h3>Venue Accessibility</h3>
-            <p class="text-white opacity-80">
-              The conference venue is 100% wheelchair accessible with flat-level floors, elevator access, and accessible restrooms throughout.
-            </p>
-          </div>
-
-          <div class="about-section">
-            <h3>Accommodation Assistance</h3>
-            <p class="text-white opacity-80">
-              We can help you identify wheelchair-accessible hotels in the area. Contact us at 
-              <a href="mailto:organisers@euruko.org" class="text-euruko-yellow hover:underline">organisers@euruko.org</a>
-            </p>
-          </div>
-
-          <div class="about-section">
-            <h3>Ruby Safari Accessibility</h3>
-            <p class="text-white opacity-80">
-              The Ruby Safari takes place entirely in Viana do Castelo's mostly flat historic center. The walking tour stays within the accessible areas of the city center.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Ready to Join section -->
+    <!-- Call to action section -->
     <section class="relative mobile-section-spacing lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-          Ready to Join Us in Viana do Castelo?
-        </h2>
-        <p class="text-lg leading-8 text-white opacity-80 mb-8">
-          We can't wait to welcome you to the charming coastal city where European Ruby developers gather. 
-          See you at the Centro Cultural this September!
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
-            class="rounded-full bg-euruko-yellow px-6 py-3 text-lg font-semibold text-black shadow-sm hover:bg-opacity-90">
-            Get Tickets
-          </a>
-          <a href="https://euruko.kit.com/99cb4f5a3c" target="_blank"
-            class="rounded-full border border-white px-6 py-3 text-lg font-semibold text-white hover:bg-white hover:text-black transition-colors">
-            Sign up for updates
-          </a>
+        <div class="intro-section">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6">
+            Ready to Experience Euruko 2025?
+          </h2>
+          <p class="text-lg text-white opacity-90 mb-8">
+            Join us in Viana do Castelo for an incredible lineup of talks, workshops, and networking opportunities, all carefully curated by this amazing committee.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+              class="rounded-full bg-euruko-yellow px-6 py-3 text-lg font-semibold text-black shadow-sm hover:bg-opacity-90">
+              Get Your Tickets
+            </a>
+            <a href="index.html#speakers"
+              class="rounded-full border border-white px-6 py-3 text-lg font-semibold text-white hover:bg-white hover:text-black transition-colors">
+              View Speakers
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -794,10 +722,10 @@
           <!-- Links -->
           <div class="text-center lg:text-left">
             <ul class="space-y-2">
+              <li><a href="about.html" class="text-xs text-gray-700 hover:text-gray-900">About</a></li>
+              <li><a href="cfp.html" class="text-xs text-gray-700 hover:text-gray-900">CFP Committee</a></li>
               <li><a href="index.html#speakers" class="text-xs text-gray-700 hover:text-gray-900">Speakers</a></li>
               <li><a href="index.html#sponsors" class="text-xs text-gray-700 hover:text-gray-900">Sponsors</a></li>
-              <li><a href="index.html#accessibility" class="text-xs text-gray-700 hover:text-gray-900">Accessibility</a></li>
-              <li><a href="cfp.html" class="text-xs text-gray-700 hover:text-gray-900">CFP Committee</a></li>
             </ul>
           </div>
 
