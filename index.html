@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euruko 2025 - The Heart of Code | Viana do Castelo, Portugal</title>
+  <meta name="description"
+    content="Join us at Euruko 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://ti.to">
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://euruko.kit.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="output.css" as="style">
+  <link rel="preload" href="images/logo-red.svg" as="image">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://2025.euruko.org">
+  <meta property="og:title" content="Euruko 2025 - The Heart of Code | Viana do Castelo, Portugal">
+  <meta property="og:description"
+    content="Join us at Euruko 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+  <meta property="og:image" content="/images/banner.jpeg">
+  <meta property="og:image:alt" content="Euruko 2025 Conference Banner">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@euruko">
+  <meta name="twitter:title" content="Euruko 2025 - The Heart of Code">
+  <meta name="twitter:description"
+    content="Join us at Euruko 2025, the European Ruby Conference, in Viana do Castelo, Portugal. An annual conference with an informal atmosphere and opportunities to learn from developers worldwide.">
+  <meta name="twitter:image" content="/images/banner.jpeg">
+
+  <link href="output.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    /* Replace the dot pattern with an image background */
+    .bg-image-pattern {
+      background-image: url('images/white-pattern-bg.png');
+      /* Use existing image name */
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      /* Full viewport height */
+      opacity: 0.02;
+      /* Even more subtle overlay for better contrast */
+      z-index: 0;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+      pointer-events: none;
+    }
+
+    /* Keep other styles */
+    .text-euruko-yellow {
+      color: #FFE55C;
+    }
+
+    .bg-euruko-yellow {
+      background-color: #FFE55C;
+    }
+
+    .bg-gradient-wrapper {
+      background: linear-gradient(to bottom,
+          #d1424d 0%,
+          #c82f3d 30%,
+          #a81420 100%);
+      background-attachment: local;
+    }
+
+    .ruby-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background-image: url('images/favicon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+      opacity: 0.15;
+      filter: blur(2px);
+      transform: translate(20%, -20%) rotate(-45deg);
+      pointer-events: none;
+    }
+
+    .ruby-decoration::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      filter: blur(20px);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .ruby-small {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-image: url('images/favicon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.1;
+      filter: blur(1px);
+    }
+
+    .ruby-bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: translate(30%, 30%) rotate(-15deg);
+    }
+
+    .ruby-top-left {
+      top: 0;
+      left: 0;
+      transform: translate(-30%, -30%) rotate(15deg);
+    }
+
+    /* Prevent horizontal scrolling on mobile - FIXED: Only apply to body and with more specific targeting */
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* Ensure we don't break vertical scrolling on any OS/browser */
+    html {
+        overflow-y: auto;
+        max-width: 100%;
+    }
+
+    /* Add focus styles for better accessibility */
+    a:focus,
+    button:focus {
+        outline: 3px solid #FFE55C;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    /* Improve contrast for better accessibility */
+    .text-white.opacity-80 {
+        opacity: 1;
+    }
+    
+    /* Enhanced text shadow for better readability on background */
+    .hero-content h1,
+    .hero-content .text-white {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Add skip link for screen readers */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #FFE55C;
+        color: black;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .skip-link:focus {
+        top: 6px;
+    }
+
+    /* Make images more responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Optimize font loading */
+    @font-face {
+        font-display: swap;
+    }
+
+    /* Use content-visibility for performance on large sections */
+    .speaker-grid {
+        content-visibility: auto;
+        contain-intrinsic-size: 0 400px;
+    }
+
+    /* Improve layout stability */
+    .speaker-photo {
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 1;
+    }
+
+    /* Mobile hamburger menu */
+    .mobile-menu-button {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .mobile-menu-button span {
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        margin: 2px 0;
+        transition: 0.3s;
+    }
+
+    .mobile-menu-button.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: translateZ(0) rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-menu-button.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-button.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+        transform: translateZ(0) rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Add hardware acceleration to transitions */
+    .mobile-menu-button span {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+    }
+
+    /* Mobile first styles */
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .stats-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .speaker-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Workshops grid - single column on mobile for better spacing */
+    .workshops-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Mobile-specific improvements */
+    .mobile-hero-spacing {
+        padding: 2rem 1rem;
+    }
+
+    .mobile-section-spacing {
+        padding: 3rem 1rem;
+    }
+
+    .mobile-text-lg {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .mobile-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+        min-height: 44px; /* Better touch target */
+    }
+
+    .speaker-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 1.5rem;
+      padding: 1.5rem 0.75rem 1.25rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+    }
+
+    /* Dual speaker workshop styles */
+    .dual-speaker-card {
+      padding: 2rem 1rem 1.5rem 1rem;
+    }
+
+    .dual-speaker-photos {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      height: 125px;
+      width: 200px;
+    }
+
+    .speaker-photo-left,
+    .speaker-photo-right {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .speaker-photo-left {
+      left: 0;
+      z-index: 2;
+    }
+
+    .speaker-photo-right {
+      right: 0;
+      z-index: 1;
+    }
+
+    .dual-speaker-names {
+      text-align: center;
+    }
+
+    .dual-speaker-bios {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .speaker-photo {
+      width: 125px;
+      height: 125px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+      background: #fff;
+    }
+    .speaker-name {
+      margin-top: 1.25rem;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+    }
+    .speaker-talk {
+      margin-top: 0.5rem;
+      color: #FFE55C;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* Special styling for Matz's card to compensate for shorter text */
+    .matz-card .speaker-name {
+      font-size: 1.25rem;
+    }
+    
+    .matz-card .speaker-bio {
+      font-size: 1rem;
+    }
+
+    .schedule-day-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .schedule-item {
+        padding: 0.75rem;
+    }
+
+    .sponsor-item {
+        border-radius: 9999px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Small mobile improvements */
+    @media (min-width: 480px) {
+        .stats-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .speaker-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: none;
+        }
+
+        .workshops-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: none;
+        }
+
+        .speaker-photo {
+            width: 110px;
+            height: 110px;
+        }
+
+        .speaker-card {
+            padding: 1.75rem 1rem 1.5rem 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Tablet and desktop styles */
+    @media (min-width: 768px) {
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+
+        .stats-wrapper {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .speaker-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: none;
+            margin: 0;
+        }
+
+        .workshops-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: none;
+            margin: 0;
+        }
+
+        .speaker-photo {
+            width: 125px;
+            height: 125px;
+        }
+
+        .schedule-item {
+            padding: 1rem;
+        }
+
+        .speaker-card {
+          max-width: 300px;
+          padding: 2.5rem 1rem 2rem 1rem;
+        }
+
+        .mobile-hero-spacing {
+            padding: 3rem 1.5rem;
+        }
+
+        .mobile-section-spacing {
+            padding: 4rem 1.5rem;
+        }
+
+        .mobile-text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
+
+        /* Enhanced font sizes for Matz's card on larger screens */
+        .matz-card .speaker-name {
+            font-size: 1.35rem;
+        }
+        
+        .matz-card .speaker-bio {
+            font-size: 1.125rem;
+        }
+    }
+
+    /* Fix the mobile navbar */
+    @media (max-width: 767px) {
+        .mobile-navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .mobile-menu-button {
+            display: flex;
+        }
+
+        .mobile-nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, #CC1525 0%, #e23846 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .mobile-nav-links.active {
+            display: block;
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            font-weight: 500;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-nav-links a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-ticket-button {
+            margin-top: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        /* Hide desktop nav links on mobile, show only ticket button */
+        .mobile-navbar .flex.items-center.space-x-8 {
+            display: none;
+        }
+    }
+
+    /* Newsletter section responsiveness */
+    .newsletter-section {
+        padding: 3rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .newsletter-section {
+            padding: 5rem 2rem;
+        }
+    }
+  </style>
+</head>
+
+<body class="flex h-full flex-col bg-[#CC1525] w-full">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Contact Banner -->
+  <div class="bg-yellow-400 text-gray-900 text-center py-2 px-4 text-sm font-medium relative z-50" style="background-color: #facc15 !important;">
+    <p>Want to discuss the Portuguese Ruby community or anything else? Feel free to reach out to <a href="mailto:elo.henrique@gmail.com" class="underline hover:text-gray-800">elo.henrique@gmail.com</a></p>
+  </div>
+  
+  <div class="bg-gradient-wrapper absolute inset-0 h-full"></div>
+
+  <!-- Background image overlay with fade-out -->
+  <div class="bg-image-pattern" aria-hidden="true"></div>
+
+  <!-- Top navigation bar with evenly distributed links -->
+  <header class="relative z-50">
+    <div class="ruby-decoration" aria-hidden="true"></div>
+
+    <!-- Mobile navigation -->
+    <nav class="md:hidden mobile-navbar border-b border-white/10" aria-label="Mobile">
+      <div class="flex items-center space-x-8">
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
+        <a href="https://app.euruko.org" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Agenda
+        </a>
+        <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Speakers
+        </a>
+        <a href="cfp.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          CFP
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+          class="rounded-full bg-euruko-yellow px-3 py-2 text-xs font-semibold text-black shadow-sm hover:bg-opacity-90">
+          TICKETS
+        </a>
+        <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavLinks">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile menu dropdown -->
+      <div class="mobile-nav-links" id="mobileNavLinks" role="menu" aria-labelledby="mobile-menu-button">
+        <a href="about.html" class="text-white hover:text-euruko-yellow" role="menuitem">
+          About
+        </a>
+        <a href="https://app.euruko.org" class="text-white hover:text-euruko-yellow" role="menuitem">
+          Agenda
+        </a>
+        <a href="#speakers" class="text-white hover:text-euruko-yellow" role="menuitem">
+          Speakers
+        </a>
+        <a href="#sponsors" class="text-white hover:text-euruko-yellow" role="menuitem">
+          Sponsors
+        </a>
+        <a href="#accessibility" class="text-white hover:text-euruko-yellow" role="menuitem">
+          Accessibility
+        </a>
+        <a href="cfp.html" class="text-white hover:text-euruko-yellow" role="menuitem">
+          CFP Committee
+        </a>
+      </div>
+    </nav>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex items-center justify-between border-b border-white/10 px-6 py-3" aria-label="Global">
+      <div class="flex items-center space-x-8">
+        <a href="about.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          About
+        </a>
+        <a href="https://app.euruko.org" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Agenda
+        </a>
+        <a href="#speakers" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Speakers
+        </a>
+        <a href="#sponsors" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Sponsors
+        </a>
+        <a href="#accessibility" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          Accessibility
+        </a>
+        <a href="cfp.html" class="text-sm font-semibold leading-6 text-white hover:text-euruko-yellow">
+          CFP
+        </a>
+      </div>
+      <div>
+        <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+          class="rounded-full bg-euruko-yellow px-4 py-2 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
+          GET MY TICKET
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero section with logo and title -->
+    <div class="relative">
+      <div class="mx-auto max-w-7xl mobile-hero-spacing md:px-6 md:py-12 sm:py-16 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div class="mb-6 md:mb-0 md:w-1/2 flex justify-center">
+            <img src="images/logo-red.svg" alt="Euruko 2025" class="w-full max-w-[280px] md:max-w-md h-auto" width="300" height="200" loading="eager" fetchpriority="high">
+          </div>
+          <div class="text-center md:w-1/2 hero-content">
+            <h1 class="font-bold tracking-tight text-black">
+              THE HE<span class="text-white">ART</span><br>OF CODE
+            </h1>
+            
+            <!-- Dates and Location -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center">
+              <div class="inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-red shadow-sm">
+                September 18-19, 2025
+              </div>
+              <div class="inline-flex items-center text-sm font-medium text-white">
+                <svg class="mr-1.5 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <a href="https://maps.app.goo.gl/RnJqmDhkChpUmJSj9" target="_blank" rel="noopener" 
+                   class="hover:text-euruko-yellow transition-colors duration-200">
+                  Viana do Castelo Cultural Center, Portugal
+                </a>
+              </div>
+            </div>
+            
+            <!-- Stats/Highlights -->
+            <div class="mt-8 md:mt-12">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+                
+                <!-- Single Track -->
+                <div class="flex flex-col items-center text-center">
+                  <div class="text-3xl md:text-4xl font-extrabold text-euruko-yellow">1</div>
+                  <p class="mt-1 text-sm md:text-base font-medium text-white">Single Track</p>
+                </div>
+
+                <!-- Talks -->
+                <div class="flex flex-col items-center text-center">
+                  <div class="text-3xl md:text-4xl font-extrabold text-euruko-yellow">16</div>
+                  <p class="mt-1 text-sm md:text-base font-medium text-white">Talks</p>
+                </div>
+
+                <!-- Workshops -->
+                <div class="flex flex-col items-center text-center">
+                  <div class="text-3xl md:text-4xl font-extrabold text-euruko-yellow">6</div>
+                  <p class="mt-1 text-sm md:text-base font-medium text-white">Workshops</p>
+                </div>
+
+                <!-- Ruby Safari -->
+                <div class="flex flex-col items-center text-center">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-euruko-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h4l3 8 4-16 3 8h4"></path>
+                  </svg>
+                  <p class="mt-1 text-sm md:text-base font-medium text-white">Ruby Safari</p>
+                </div>
+
+              </div>
+            </div>
+             
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-1 relative z-10">
+    <!-- About section -->
+    <section id="about" class="relative mobile-section-spacing lg:px-8" aria-labelledby="about-heading">
+      <div class="mx-auto max-w-7xl">
+        <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
+
+        <div class="lg:flex lg:items-center lg:gap-x-16">
+          <div class="lg:w-1/2">
+            <h2 id="about-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white">ABOUT EURUKO 25'</h2>
+            <p class="mt-4 mobile-text-lg text-white opacity-80">
+              Euruko (European Ruby Conference) is an annual conference about the Ruby programming language with an
+              informal atmosphere and lots of opportunities to listen, learn, and talk with developers from all around
+              the world.
+            </p>
+
+            <h2 class="mt-6 md:mt-8 text-xl md:text-2xl font-bold tracking-tight text-white">VIANA DO CASTELO, PORTUGAL</h2>
+            <p class="mt-4 mobile-text-lg text-white opacity-80">
+              Join us in Viana do Castelo, a charming coastal city where history meets modernity.
+              Experience a city rich in culture and architectural heritage, and conveniently located only 40 minutes
+              from Porto Airport.
+            </p>
+
+            <!-- Add ticket button to About section -->
+            <div class="mt-6 md:mt-8">
+              <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+                class="rounded-full bg-euruko-yellow px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90 mobile-button">
+                RESERVE YOUR SPOT
+              </a>
+            </div>
+          </div>
+
+          <!-- Video section -->
+          <div class="mt-10 lg:mt-0 lg:w-1/2">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black/20 shadow-lg">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/zqKfGVdQ-wo?autoplay=1&mute=1"
+                title="Viana do Castelo Promotional Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+               >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speakers section -->
+    <section id="speakers" class="relative mobile-section-spacing lg:px-8" aria-labelledby="speakers-heading">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="speakers-heading" class="text-xl md:text-2xl font-bold tracking-tight text-white mb-8 md:mb-12 text-center">OUR SPEAKERS</h2>
+        
+        <!-- Keynotes & MCs Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Keynotes & MCs</h3>
+          <div class="speaker-grid" role="list" aria-label="Conference keynotes and MCs">
+            <!-- Yukihiro "Matz" Matsumoto -->
+            <article class="speaker-card matz-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/matz.jpg" alt="Yukihiro Matsumoto (Matz)" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Yukihiro "Matz" Matsumoto</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Creator of Ruby, Japan</p>
+            </article>
+
+            <!-- Eileen -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/eileen.jpeg" alt="Eileen" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Eileen Uchitelle</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Rails and Ruby Core Team, Senior Staff Engineer at Shopify, USA</p>
+            </article>
+            
+            <!-- Zuzanna Kusznir & Andrzej Krzywda - Dual MC Card -->
+            <article class="speaker-card dual-speaker-card">
+              <div class="dual-speaker-photos">
+                <div class="speaker-photo speaker-photo-left">
+                  <img src="images/cfp/zuzanna.jpg" alt="Zuzanna Kusznir" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+                <div class="speaker-photo speaker-photo-right">
+                  <img src="images/cfp/andrzej.png" alt="Andrzej Krzywda" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+              </div>
+              <div class="dual-speaker-names">
+                <h3 class="speaker-name">Zuzanna Kusznir & Andrzej Krzywda</h3>
+              </div>
+              <div class="dual-speaker-bios">
+                <p class="speaker-bio text-white opacity-70 text-sm mb-1 text-center">Conference MCs</p>
+                <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Poland</p>
+              </div>
+            </article>
+
+            <!-- Spacer card for 4-column alignment -->
+            <div class="hidden md:block" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Talks Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Talks</h3>
+          <div class="speaker-grid" role="list" aria-label="Conference speakers - Talks">
+            <!-- Albert Pazderin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/albert-pazderin.png" alt="Albert Pazderin" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Albert Pazderin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Backend developer at Evil Martians, Georgia</p>
+              <p class="speaker-talk">Building interactive Ruby gem tutorials with Wasm – yes, right in the browser!</p>
+            </article>
+
+            <!-- Alexander Baygeldin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/alexander-baygeldin.png" alt="Alexander Baygeldin" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Alexander Baygeldin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Backend Engineer at Evil Martians, Portugal</p>
+              <p class="speaker-talk">Prioritization justice: lessons from making background jobs fair at scale</p>
+            </article>
+
+            <!-- Carmine Paolino -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/carmine-paolino.png" alt="Carmine Paolino" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Carmine Paolino</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Founder and CEO at Chat with Work, Germany</p>
+              <p class="speaker-talk">RubyLLM: Making AI Development Beautiful Again</p>
+            </article>
+
+            <!-- Emiliano Della Casa -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/emiliano-della-casa.png" alt="Emiliano Della Casa" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Emiliano Della Casa</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software Engineer at Studio Nexteering, Italy</p>
+              <p class="speaker-talk">gRPC on Ruby On Rails - a perfect match!</p>
+            </article>
+
+            <!-- Ivo Anjo -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/ivo-anjo.png" alt="Ivo Anjo" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Ivo Anjo</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Engineer at Datadog, UK</p>
+              <p class="speaker-talk">How a Ruby profiler works: Stackprof under a microscope</p>
+            </article>
+
+            <!-- Jose Valim -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/jose-valim.jpeg" alt="José Valim" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">José Valim</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Creator of Elixir, CEO @ tidewave.io, Poland</p>
+              <p class="speaker-talk">Navigating uncharted waters: coding agents and tooling evolution</p>
+            </article>
+
+            <!-- Julia Egorova -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/julia-egorova.png" alt="Julia Egorova" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Julia Egorova</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software engineer at Evil Martians, Georgia</p>
+              <p class="speaker-talk">Don't Be "Thread"-ened: Testing Multithreaded Code with Confidence</p>
+            </article>
+
+            <!-- Karen Jex -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/karen-jex.png" alt="Karen Jex" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Karen Jex</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Solutions Architect at Crunchy Data, France</p>
+              <p class="speaker-talk">Postgres Partitioning Best Practices</p>
+            </article>
+
+            <!-- Marco Roth -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/marco-roth.png" alt="Marco Roth" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Marco Roth</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Full-Stack Ruby on Rails Developer, Switzerland</p>
+              <p class="speaker-talk">Introducing ReActionView: A new ActionView-Compatible ERB Engine</p>
+            </article>
+
+            <!-- Obie Fernandez -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/obie-fernandez.png" alt="Obie Fernandez" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Obie Fernandez</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Principal Engineer at Shopify, USA</p>
+              <p class="speaker-talk">Roasting Code for Fun & Profit with Structured AI Workflows</p>
+            </article>
+
+            <!-- Paweł Strzałkowski -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/pawel-strzalkowski.png" alt="Paweł Strzałkowski" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Paweł Strzałkowski</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Chief Technology Officer at Visuality, Poland</p>
+              <p class="speaker-talk">Making Rails AI-Native with the Model Context Protocol</p>
+            </article>
+
+            <!-- Rémy Hannequin -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/remy-hannequin.png" alt="Rémy Hannequin" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Rémy Hannequin</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior developer at thoughtbot, France</p>
+              <p class="speaker-talk">The hidden value of niche open-source projects</p>
+            </article>
+
+            <!-- Sangyong Sim "Shia" -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/shia.jpeg" alt="Sangyong Sim 'Shia'" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Sangyong Sim "Shia"</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software Engineer at STORES, Inc., Japan</p>
+              <p class="speaker-talk">Conquering Massive Traffic Spikes in Ruby Applications with Pitchfork</p>
+            </article>
+
+            <!-- Szymon Fiedler -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/szymon-fiedler.png" alt="Szymon Fiedler" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Szymon Fiedler</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Software Engineer at Arkency, Poland</p>
+              <p class="speaker-talk">Rewrite with confidence: validating business rules through isolated testing</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Workshops Section -->
+        <div class="mb-16">
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-8 text-center opacity-90">Workshops</h3>
+          <div class="workshops-grid" role="list" aria-label="Conference speakers - Workshops">
+            <!-- Fritz Meissner -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/fritz-meissner.png" alt="Fritz Meissner" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Fritz Meissner</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Development Team Lead at thoughtbot, UK</p>
+              <p class="speaker-talk">How to improve your own and others' code</p>
+            </article>
+
+            <!-- Hitoshi HASUMI -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/hitoshi-hasumi.png" alt="Hitoshi HASUMI" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Hitoshi HASUMI</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Creator of PicoRuby, Japan</p>
+              <p class="speaker-talk">PicoRuby Hands-on: Internet of Things Edition</p>
+            </article>
+
+            <!-- Joel Drapper -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/joel-drapper.png" alt="Joel Drapper" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Joel Drapper</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Software engineer at Plane, UK</p>
+              <p class="speaker-talk">Smoke and Mirrors: the Tricks Behind Magical Ruby Interfaces</p>
+            </article>
+
+            <!-- Lucian Ghinda -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/lucian-ghinda.png" alt="Lucian Ghinda" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Lucian Ghinda</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Senior Product Engineer, Romania</p>
+              <p class="speaker-talk">Don't Let Your AI Guess: Teach It to Test!</p>
+            </article>
+            <!-- Dmitrijs Zubriks -->
+            <article class="speaker-card">
+              <div class="speaker-photo">
+                <img src="images/speakers/dmitrijs.jpeg" alt="Dmitrijs Zubriks" class="w-full h-full object-cover" width="125" height="125">
+              </div>
+              <h3 class="speaker-name">Dmitrijs Zubriks</h3>
+              <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Principal Software Engineer at GoCardless, Latvia</p>
+              <p class="speaker-talk">What Really Happens When You Thread.new</p>
+            </article>
+
+            <!-- Anders Bälter & Patrik Ragnarsson - Dual Speaker Workshop -->
+            <article class="speaker-card dual-speaker-card">
+              <div class="dual-speaker-photos">
+                <div class="speaker-photo speaker-photo-left">
+                  <img src="images/speakers/anders.jpeg" alt="Anders Bälter" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+                <div class="speaker-photo speaker-photo-right">
+                  <img src="images/speakers/patrik.jpeg" alt="Patrik Ragnarsson" class="w-full h-full object-cover" width="125" height="125">
+                </div>
+              </div>
+              <div class="dual-speaker-names">
+                <h3 class="speaker-name">Anders Bälter & Patrik Ragnarsson</h3>
+              </div>
+              <div class="dual-speaker-bios">
+                <p class="speaker-bio text-white opacity-70 text-sm mb-1 text-center">Anders: CTO at 84codes</p>
+                <p class="speaker-bio text-white opacity-70 text-sm mb-2 text-center">Patrik: Developer at 84codes and maintainer of Sinatra & Puma</p>
+              </div>
+              <p class="speaker-talk">Hands-on with Message Queues: Build and Connect Microservices with AMQP</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+            class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90">
+            GET YOUR TICKET
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility section -->
+    <section id="accessibility" class="relative mobile-section-spacing lg:px-8" aria-labelledby="accessibility-heading">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="accessibility-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+          ACCESSIBILITY
+        </h2>
+
+        <div class="mx-auto max-w-3xl">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Venue Accessibility</h3>
+              <p class="mobile-text-lg text-white opacity-80">
+                The event venue is 100% wheelchair accessible. The building features an elevator, and the entire conference area is on a flat level. We also have accessible restrooms available throughout the venue.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Special Considerations</h3>
+              <p class="mobile-text-lg text-white opacity-80">
+                We can assist you in identifying hotels in the area that are wheelchair accessible. Please contact us at <a href="mailto:organisers@euruko.org" class="text-euruko-yellow hover:underline">organisers@euruko.org</a> if you would like our help with accommodation recommendations.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Ruby Safari Accessibility</h3>
+              <p class="mobile-text-lg text-white opacity-80">
+                The Ruby Safari will take place in the center of Viana do Castelo, which is a charming, rustic city that is mostly flat and generally accessible. While there may be occasional minor obstacles typical of historic areas (such as narrower sidewalks or traditional cobblestones), these can usually be managed with assistance. The Safari culminates at a hilltop location, which is reached via a funicular elevator that is wheelchair accessible.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Transportation</h3>
+              <p class="mobile-text-lg text-white opacity-80">
+                Regarding our complimentary shuttle bus service from Porto, we don't yet have information about the specific type of buses that will be provided. Given the distance from the Euruko, the bus company hasn't confirmed these details at this early stage, making it difficult for us to provide that information right now. We'll be sure to update you as soon as we have more details about the shuttle accessibility.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 md:mt-12 text-center">
+            <p class="mobile-text-lg text-white opacity-80">
+              Please don't hesitate to reach out if you have any other questions or if there's anything else we can do to ensure your experience at Euruko 2025 is comfortable and enjoyable.
+            </p>
+            <p class="mt-4 mobile-text-lg text-white opacity-80">
+              Looking forward to welcoming you to Viana do Castelo!
+            </p>
+            <div class="mt-6 md:mt-8">
+              <a href="mailto:organisers@euruko.org" class="text-euruko-yellow hover:underline mobile-text-lg">
+                Contact us for more information
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors section -->
+    <section id="sponsors" class="relative mobile-section-spacing lg:px-8" aria-labelledby="sponsors-heading">
+      <div class="mx-auto max-w-7xl">
+        <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
+
+        <h2 id="sponsors-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+          A BIG SHOUTOUT<br>TO OUR SPONSORS!
+        </h2>
+
+        <!-- Silver Sponsors -->
+        <h3 class="text-center text-lg font-medium text-white mb-6">Silver</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 justify-items-center max-w-6xl mx-auto">
+          <a href="https://84codes.com" target="_blank" rel="noopener" class="block">
+            <div class="w-60 h-32 flex items-center justify-center rounded-xl bg-white p-8 shadow-sm">
+              <img src="images/sponsors/cloudamqp-by-84codes.svg" alt="84codes" class="max-w-full max-h-full object-contain" width="180" height="80">
+            </div>
+          </a>
+          <a href="https://www.salsify.com" target="_blank" rel="noopener" class="block">
+            <div class="w-60 h-32 flex items-center justify-center rounded-xl bg-white p-8 shadow-sm">
+              <img src="images/sponsors/salsify.png" alt="Salsify" class="max-w-full max-h-full object-contain" width="180" height="80">
+            </div>
+          </a>
+          <a href="https://gocardless.com" target="_blank" rel="noopener" class="block">
+            <div class="w-60 h-32 flex items-center justify-center rounded-xl bg-white p-8 shadow-sm">
+              <img src="images/sponsors/gocardless.svg" alt="GoCardless" class="max-w-full max-h-full object-contain" width="180" height="80">
+            </div>
+          </a>
+        </div>
+
+        <!-- Bronze Sponsors -->
+        <div>
+          <h3 class="text-center text-lg font-medium text-white mb-6">Bronze</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16 justify-items-center">
+            <a href="https://www.appsignal.com" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/appsignal.png" alt="AppSignal" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+            <a href="https://evilmartians.com" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/evil_martians.jpeg" alt="Evil Martians" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+            <a href="https://www.rorvswild.com" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/rorvswild.svg" alt="RoRvsWild" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+            <a href="https://typesense.org" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/typesense.svg" alt="Typesense" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+            <a href="https://ventrata.com" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/ventrata.svg" alt="Ventrata" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Online Sponsors -->
+        <div>
+          <h3 class="text-center text-lg font-medium text-white mb-6">Online Sponsors</h3>
+          <div class="flex justify-center mb-16">
+            <a href="https://welaika.com" target="_blank" rel="noopener" class="block">
+              <div class="w-48 h-24 flex items-center justify-center rounded-xl bg-white p-5 shadow-sm">
+                <img src="images/sponsors/welaika.png" alt="WeLaika" class="max-w-full max-h-full object-contain" width="160" height="80">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Travel Sponsors -->
+        <div>
+          <h3 class="text-center text-lg font-medium text-white mb-6">Travel Sponsors</h3>
+          <div class="flex justify-center mb-16">
+            <a href="https://arkency.com" target="_blank" rel="noopener" class="block">
+              <div class="w-36 h-20 flex items-center justify-center rounded-xl bg-white p-2 shadow-sm">
+                <img src="images/sponsors/arkency.svg" alt="Arkency" class="max-w-full max-h-full object-contain" width="120" height="64">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- After the current sponsors display and before the "Become a Sponsor" section -->
+        <div class="flex items-center justify-center my-16">
+          <div class="w-full max-w-xs h-px bg-white/20"></div>
+          <div class="mx-4">
+            <div class="relative w-8 h-8">
+              <div class="absolute inset-0 bg-euruko-yellow rounded-full opacity-20"></div>
+              <img src="images/favicon.svg" class="w-8 h-8" aria-hidden="true">
+            </div>
+          </div>
+          <div class="w-full max-w-xs h-px bg-white/20"></div>
+        </div>
+
+        <!-- Add a decorative ruby -->
+        <div class="ruby-small ruby-bottom-right" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Partners section -->
+    <section id="partners" class="relative mobile-section-spacing lg:px-8" aria-labelledby="partners-heading">
+      <div class="mx-auto max-w-7xl">
+        <div class="ruby-small ruby-top-left" aria-hidden="true"></div>
+
+        <h2 id="partners-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+          OUR AMAZING PARTNERS
+        </h2>
+
+        <!-- Organization Partner, Host City & Institutional Partners -->
+        <div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
+            <!-- Organization Partner -->
+            <div>
+              <h3 class="text-center text-lg font-medium text-white mb-6">Organization</h3>
+              <div class="flex justify-center">
+                <a href="https://www.linkcb.pt" target="_blank" rel="noopener" class="block max-w-xl">
+                  <div class="flex h-40 items-center justify-center rounded-xl bg-white px-16 shadow-lg">
+                    <img src="/images/partners/link.jpg" alt="Link Cowork & Business" class="h-32 w-auto object-contain" width="280" height="128">
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Host City -->
+            <div>
+              <h3 class="text-center text-lg font-medium text-white mb-6">Host City</h3>
+              <div class="flex justify-center">
+                <a href="https://www.cm-viana-castelo.pt" target="_blank" rel="noopener" class="block max-w-xl">
+                  <div class="flex h-40 items-center justify-center rounded-xl bg-white px-16 shadow-lg">
+                    <img src="/images/partners/cmvc.jpg" alt="Câmara Municipal Viana do Castelo" class="h-32 w-auto object-contain" width="280" height="128">
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Institutional Partners -->
+            <div>
+              <h3 class="text-center text-lg font-medium text-white mb-6">Institutional</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <!-- Turismo Porto e Norte -->
+                <div class="flex justify-center">
+                  <a href="http://www.portoenorte.pt/en/" target="_blank" rel="noopener" class="block w-full">
+                    <div class="flex h-20 items-center justify-center rounded-xl bg-white p-3 shadow-lg">
+                      <img src="/images/partners/porto-e-norte.png" alt="Turismo Porto e Norte" class="max-h-14 max-w-full object-contain" width="140" height="56">
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Instituto Português do Desporto e Juventude -->
+                <div class="flex justify-center">
+                  <a href="https://ipdj.gov.pt" target="_blank" rel="noopener" class="block w-full">
+                    <div class="flex h-20 items-center justify-center rounded-xl bg-white p-3 shadow-lg">
+                      <img src="/images/partners/ipdj.png" alt="Instituto Português do Desporto e Juventude" class="max-h-14 max-w-full object-contain" width="140" height="56">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community Partners -->
+        <div>
+          <h3 class="text-center text-lg font-medium text-white mb-6">Community Partners</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 mb-16 justify-items-center">
+            <a href="https://balticruby.org" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/balticruby.webp" alt="Baltic Ruby" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://friendlyrb.com" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/friendlyrb.png" alt="Friendly RB" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://rubyonrails.org/foundation" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/rails-foundation.png" alt="Rails Foundation" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://rubyeurope.com" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/ruby-europe.svg" alt="Ruby Europe" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://wrocloverb.com" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/wroclove-rb.svg" alt="Wroclove RB" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://helvetic-ruby.ch" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/helvetic-ruby.svg" alt="Helvetic Ruby" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+            <a href="https://rubyconf.at" target="_blank" rel="noopener" class="block w-[120px] md:w-[140px]">
+              <div class="flex h-20 items-center justify-center rounded-xl bg-white p-4 shadow-sm">
+                <img src="/images/partners/rubyconf-at.jpeg" alt="RubyConf AT" class="max-h-12 max-w-full object-contain" width="120" height="48">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ruby Triathlon Spotlight -->
+        <div class="mt-20 mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl mb-6">Ruby Triathlon</h2>
+          <div class="bg-white/10 rounded-xl p-8 shadow-lg">
+            <a href="https://www.rubytriathlon.com" target="_blank" rel="noopener" class="block">
+              <div class="flex items-center justify-center mb-6 bg-white p-5 rounded-xl shadow-sm mx-auto max-w-[240px]">
+                <img src="/images/partners/rubytriathlon.png" alt="Ruby Triathlon" class="max-h-16 max-w-full object-contain" width="200" height="64">
+              </div>
+            </a>
+            <p class="text-white opacity-80 text-lg">
+              Euruko 2025 is proud to be part of the Ruby Triathlon! Join this exciting journey across three Ruby conferences in Europe during September 2025. An amazing opportunity to connect with the community across different countries.
+            </p>
+            <a href="https://www.rubytriathlon.com" target="_blank" rel="noopener" class="inline-block mt-6 rounded-full bg-euruko-yellow px-6 py-2.5 text-sm font-semibold text-black">
+              Learn More About Ruby Triathlon
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media section -->
+    <section id="social" class="relative mobile-section-spacing lg:px-8" aria-labelledby="social-heading">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="social-heading" class="text-xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center mb-12 md:mb-16">
+          CONNECT WITH US
+        </h2>
+
+        <div class="mx-auto max-w-4xl">
+          <p class="text-center mobile-text-lg text-white opacity-80 mb-8 md:mb-12">
+            Stay updated with the latest news, connect with fellow Rubyists, and join the conversation across all our social platforms.
+          </p>
+          
+          <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+            <a href="https://linkedin.com/company/euruko" target="_blank" rel="noopener"
+              class="group" title="LinkedIn">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://bsky.app/profile/eurukoconf.bsky.social" target="_blank" rel="noopener"
+              class="group" title="BlueSky">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.297-5.568.628-6.383 3.364C.378 17.703 0 22.663 0 23.353c0 .688.139 1.86.902 2.203.659.299 1.664.621 4.3-1.24C7.954 22.314 10.913 18.375 12 16.261c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.539 4.3 1.24.763-.343.902-1.515.902-2.203 0-.69-.378-5.65-.624-6.479-.815-2.736-3.713-3.66-6.383-3.364-.139.017-.277.035-.415.056.138-.022.276-.04.415-.056 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"></path>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://ruby.social/@Euruko" target="_blank" rel="noopener"
+              class="group" title="Mastodon">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.193 7.879c0-5.206-3.411-6.732-3.411-6.732C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.129.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.129.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.802.776-1.802 2.312v3.349h-2.483v-3.349c0-1.536-.602-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.832V8.284c0-1.289.328-2.313.987-3.07.679-.758 1.568-1.146 2.677-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.618-1.043c.64-.983 1.608-1.474 2.886-1.474 1.109 0 1.998.388 2.677 1.146.659.757.987 1.781.987 3.07v6.304z"></path>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://x.com/euruko" target="_blank" rel="noopener"
+              class="group" title="X (Twitter)">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://discord.gg/G9hNCjYSsE" target="_blank" rel="noopener"
+              class="group" title="Discord">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"></path>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/eurukoconf" target="_blank" rel="noopener"
+              class="group" title="Instagram">
+              <div class="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                <svg class="h-8 w-8 text-white group-hover:text-euruko-yellow transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter section -->
+    <section class="relative newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div class="lg:w-1/2">
+            <h2 id="newsletter-heading" class="text-2xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              DON'T MISS A MOMENT
+            </h2>
+            <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              STAY UPDATED!
+            </h3>
+            <div class="mt-8">
+              <script async data-uid="99cb4f5a3c" src="https://euruko.kit.com/99cb4f5a3c/index.js" defer></script>
+            </div>
+
+            <!-- Add ticket button to Newsletter section -->
+            <div class="mt-6 md:mt-8">
+              <a href="https://ti.to/euruko-2025/euruko-2025" target="_blank"
+                class="rounded-full bg-euruko-yellow px-6 py-3 text-sm font-semibold text-black shadow-sm hover:bg-opacity-90 mobile-button">
+                GET YOUR TICKET TODAY
+              </a>
+            </div>
+          </div>
+          <div class="mt-16 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end newsletter-image">
+            <img src="images/mail.png" alt="" class="w-full max-w-xs lg:max-w-sm xl:max-w-md" aria-hidden="true" width="300" height="240">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Updated footer layout to include map -->
+  <footer class="relative border-t border-white/10 bg-gray-100 z-10">
+    <!-- Ruby decoration in the background -->
+    <div class="absolute left-0 top-0 w-32 h-32 opacity-5">
+      <img src="images/favicon.svg" alt="" class="w-full h-full invert" aria-hidden="true">
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+      <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+        <!-- Left column: Logo and Description -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <img src="images/logo.svg" alt="Euruko 2025 Logo" class="h-12 w-auto mx-auto lg:mx-0" width="120" height="48">
+          <p class="mt-4 text-xs leading-5 text-gray-700">
+            The European Ruby Conference<br>
+            September 18-19, 2025<br>
+            <a href="https://maps.app.goo.gl/RnJqmDhkChpUmJSj9" target="_blank" rel="noopener" 
+               class="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+              Viana do Castelo Cultural Center, Portugal
+            </a>
+          </p>
+        </div>
+
+        <!-- Right column: Links and Social -->
+        <div class="w-full lg:w-1/2 flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 lg:gap-12">
+          <!-- Links -->
+          <div class="text-center lg:text-left">
+            <ul class="space-y-2">
+              <li><a href="about.html" class="text-xs text-gray-700 hover:text-gray-900">About</a></li>
+              <li><a href="https://app.euruko.org" class="text-xs text-gray-700 hover:text-gray-900">Agenda</a></li>
+              <li><a href="#speakers" class="text-xs text-gray-700 hover:text-gray-900">Speakers</a></li>
+              <li><a href="#sponsors" class="text-xs text-gray-700 hover:text-gray-900">Sponsors</a></li>
+              <li><a href="cfp.html" class="text-xs text-gray-700 hover:text-gray-900">CFP Committee</a></li>
+              <li><a href="code-of-conduct.html" class="text-xs text-gray-700 hover:text-gray-900">Code of Conduct</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact and Social combined -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-xs font-semibold text-gray-800">Contact</h3>
+            <ul class="mt-3 space-y-2">
+              <li>
+                <a href="mailto:organisers@euruko.org" class="text-xs text-gray-700 hover:text-gray-900">
+                  organisers@euruko.org
+                </a>
+              </li>
+            </ul>
+
+            <h3 class="text-xs font-semibold text-gray-800 mt-6">Social</h3>
+            <div class="mt-3 flex justify-center lg:justify-start space-x-3">
+              <a href="https://linkedin.com/company/euruko" target="_blank" rel="noopener"
+                class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://bsky.app/profile/eurukoconf.bsky.social" target="_blank" rel="noopener"
+                class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">BlueSky</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.297-5.568.628-6.383 3.364C.378 17.703 0 22.663 0 23.353c0 .688.139 1.86.902 2.203.659.299 1.664.621 4.3-1.24C7.954 22.314 10.913 18.375 12 16.261c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.539 4.3 1.24.763-.343.902-1.515.902-2.203 0-.69-.378-5.65-.624-6.479-.815-2.736-3.713-3.66-6.383-3.364-.139.017-.277.035-.415.056.138-.022.276-.04.415-.056 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://ruby.social/@Euruko" target="_blank" rel="noopener"
+                class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">Mastodon</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.193 7.879c0-5.206-3.411-6.732-3.411-6.732C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.129.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.129.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.802.776-1.802 2.312v3.349h-2.483v-3.349c0-1.536-.602-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.832V8.284c0-1.289.328-2.313.987-3.07.679-.758 1.568-1.146 2.677-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.618-1.043c.64-.983 1.608-1.474 2.886-1.474 1.109 0 1.998.388 2.677 1.146.659.757.987 1.781.987 3.07v6.304z"></path>
+                </svg>
+              </a>
+              <a href="https://x.com/euruko" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">X (Twitter)</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://discord.gg/G9hNCjYSsE" target="_blank" rel="noopener"
+                class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">Discord</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/eurukoconf" target="_blank" rel="noopener"
+                class="text-gray-700 hover:text-gray-900">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileNavLinks = document.getElementById('mobileNavLinks');
+      const mobileNavLinksItems = mobileNavLinks.querySelectorAll('a');
+      
+      function toggleMobileMenu() {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle menu
+        mobileNavLinks.classList.toggle('active');
+        menuButton.classList.toggle('active');
+        
+        // Update ARIA attributes
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        
+        // Focus management
+        if (!isExpanded) {
+          // Menu is opening - focus first item
+          mobileNavLinksItems[0].focus();
+        } else {
+          // Menu is closing - focus button
+          menuButton.focus();
+        }
+      }
+      
+      function closeMobileMenu() {
+        mobileNavLinks.classList.remove('active');
+        menuButton.classList.remove('active');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+      
+      // Event listeners
+      menuButton.addEventListener('click', toggleMobileMenu);
+      
+      // Close menu when clicking links
+      mobileNavLinksItems.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const mobileNav = document.querySelector('.mobile-navbar');
+        
+        if (!mobileNav.contains(event.target) && mobileNavLinks.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close mobile menu on window resize to desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+          closeMobileMenu();
+        }
+      });
+      
+      // Handle keyboard navigation
+      menuButton.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMobileMenu();
+        }
+      });
+      
+      // Handle escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNavLinks.classList.contains('active')) {
+          closeMobileMenu();
+          menuButton.focus();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
